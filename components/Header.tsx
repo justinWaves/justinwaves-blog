@@ -1,5 +1,7 @@
 import React from "react";
 import Link from "next/link";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import PianoIcon from "@mui/icons-material/Piano";
 
 function Header() {
   return (
@@ -10,7 +12,7 @@ function Header() {
       >
         <Link href="/">
           <svg
-            className="w-44  object-contain cursor-pointer fill-slate-500"
+            className="w-64  object-contain cursor-pointer fill-slate-500"
             xmlns="http://www.w3.org/2000/svg"
             width="500"
             height="68"
@@ -30,16 +32,27 @@ function Header() {
         >
           <h3>About</h3>
           <h3>Contact</h3>
-          <h3 className="text-white bg-slate-500 py-1 rounded-full px-4">
-            Follow
-          </h3>
+          <a
+            target="_blank"
+            href="https://www.toneden.io/justinwaves/post/sun-will-rise"
+          >
+            <h3 className="text-white bg-slate-500 py-1 rounded-full px-4">
+              Free Music
+            </h3>
+          </a>
         </div>
       </div>
-      <div className="flex items-center space-x-5 text-slate-500">
-        <h3>Sign In</h3>
+      <div className="flex items-center space-x-5  text-slate-500">
+        <a href="https://www.instagram.com/justinwaves/" target="_blank">
+          <InstagramIcon fontSize="large" />
+        </a>
+        <a href="https://soundcloud.com/justinwaves" target="_blank">
+          <PianoIcon fontSize="large" />
+        </a>
+        {/* <h3>Sign In</h3>
         <h3 className="border px-4 py-1 rounded-full border-slate-500">
           Get Started
-        </h3>
+        </h3> */}
       </div>
     </header>
   );
