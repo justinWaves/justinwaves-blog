@@ -10,7 +10,7 @@ function Header() {
       >
         <Link href="/">
           <svg
-            className="w-44  object-contain cursor-pointer"
+            className="w-44  object-contain cursor-pointer fill-slate-500"
             xmlns="http://www.w3.org/2000/svg"
             width="500"
             height="68"
