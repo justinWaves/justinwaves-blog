@@ -5,14 +5,17 @@ import PianoIcon from "@mui/icons-material/Piano";
 
 function Header() {
   return (
-    <header className="flex justify-between p-5 mx-auto max-w-7xl">
+    <header
+      className="flex justify-between 
+     p-5  mx-auto max-w-7xl"
+    >
       <div
         className="flex items-center
-         space-x-5"
+         space-x-5 "
       >
         <Link href="/">
           <svg
-            className="w-44 md:w-64  object-contain cursor-pointer fill-slate-500"
+            className="w-44 md:w-30  object-contain cursor-pointer fill-slate-600"
             xmlns="http://www.w3.org/2000/svg"
             width="500"
             height="68"
@@ -42,7 +45,7 @@ function Header() {
           </a>
         </div>
       </div>
-      <div className="flex items-center space-x-5  text-slate-500">
+      <div className="flex items-center space-x-5  text-slate-600">
         <a href="https://www.instagram.com/justinwaves/" target="_blank">
           <InstagramIcon fontSize="large" />
         </a>
@@ -50,7 +53,7 @@ function Header() {
           <PianoIcon fontSize="large" />
         </a>
         {/* <h3>Sign In</h3>
-        <h3 className="border px-4 py-1 rounded-full border-slate-500">
+        <h3 className="border px-4 py-1 rounded-full border-slate-600">
           Get Started
         </h3> */}
       </div>
