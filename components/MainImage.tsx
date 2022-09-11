@@ -2,7 +2,7 @@ import React from "react";
 
 function MainImage() {
   return (
-    <div className="flex flex-col border-y items-center bg-main-bg w-screen h-screen overflow-hidden relative ">
+    <div className="flex flex-col border-y items-center bg-main-bg w-screen h-screen overflow-hidden bg-cover relative ">
       <div
         className="  w-screen h-screen bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 "
         w-screen
