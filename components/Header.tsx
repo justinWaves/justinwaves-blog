@@ -6,8 +6,8 @@ import PianoIcon from "@mui/icons-material/Piano";
 function Header() {
   return (
     <header
-      className="flex justify-between 
-     p-5  mx-auto max-w-7xl"
+      className="absolute flex justify-between h-50
+     p-5  mx-auto max-w-7xl motion-safe:animate-fadeIn bg-black w-screen z-10 left-0 right-0"
     >
       <div
         className="flex items-center
@@ -15,10 +15,10 @@ function Header() {
       >
         <Link href="/">
           <svg
-            className="w-44 md:w-30  object-contain cursor-pointer fill-slate-600"
+            className="w-44 md:w-30  object-contain cursor-pointer fill-slate-200 hover:animate-pulse"
             xmlns="http://www.w3.org/2000/svg"
             width="500"
-            height="68"
+            height="44"
             viewBox="0 0 500 68"
           >
             <defs></defs>
@@ -31,21 +31,23 @@ function Header() {
         </Link>
         <div
           className="hidden md:inline-flex items-center
-         space-x-5"
+         space-x-5 text-white"
         >
-          <h3>About</h3>
+          <Link href="/about">
+            <h3 className="cursor-pointer hover:animate-pulse">About</h3>
+          </Link>
           <h3>Contact</h3>
           <a
             target="_blank"
             href="https://www.toneden.io/justinwaves/post/sun-will-rise"
           >
-            <h3 className="text-white bg-slate-500 py-1 rounded-full px-4">
-              Free Music
+            <h3 className="text-black  bg-slate-200 py-1 rounded-full px-4">
+              listen
             </h3>
           </a>
         </div>
       </div>
-      <div className="flex items-center space-x-5  text-slate-600">
+      <div className="flex items-center space-x-5  text-slate-200">
         <a href="https://www.instagram.com/justinwaves/" target="_blank">
           <InstagramIcon fontSize="large" />
         </a>

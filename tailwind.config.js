@@ -7,10 +7,21 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "header-background":
-          "url('https://www.dropbox.com/s/v80d6lfot141r14/jw-blog-header.jpg?dl=0')",
+        "main-bg": "url('/jw-bg.jpg')",
+      },
+      animation: {
+        fadeIn: "fadeIn 2s ease-in forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
       },
     },
     plugins: [],
+  },
+  variants: {
+    animation: ["motion-safe"],
   },
 };
