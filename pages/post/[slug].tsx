@@ -43,7 +43,7 @@ function Post({ post }: Props) {
     <main>
       <Header />
       <img
-        className="w-full h-40 object-cover"
+        className="w-full h-40 object-cover mt-10"
         src={urlFor(post.mainImage).url()!}
         alt=""
       />
@@ -56,7 +56,7 @@ function Post({ post }: Props) {
 
         <div className="flex items-center space-x-2">
           <img
-            className="h-10 w-10 rounded-full"
+            className="h-10 w-10 rounded-full "
             src={urlFor(post.author.image).url()!}
             alt=""
           />
@@ -146,7 +146,7 @@ function Post({ post }: Props) {
 
           <input
             type="submit"
-            className="shadow bg-slate-500 hover:bg-slate-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+            className="shadow bg-slate-800 hover:bg-slate-900 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
           />
 
           {/* errors return when validation fails */}
@@ -167,7 +167,7 @@ function Post({ post }: Props) {
       )}
 
       {/* COMMENTS */}
-      <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 shadow shadow-slate-500">
+      <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 shadow shadow-slate-900">
         <h3 className="text-4xl">Comments</h3>
         <hr className="pb-2" />
         {post.comments.map((comment) => (

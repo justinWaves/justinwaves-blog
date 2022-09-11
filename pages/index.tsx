@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainImage from "../components/MainImage";
 import { sanityClient, urlFor } from "../sanity";
@@ -48,6 +49,7 @@ const Home = ({ posts }: Props) => {
           </Link>
         ))}
       </div>
+      <Footer />
     </div>
   );
 };

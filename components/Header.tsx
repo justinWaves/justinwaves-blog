@@ -6,7 +6,7 @@ import PianoIcon from "@mui/icons-material/Piano";
 function Header() {
   return (
     <header
-      className="absolute flex justify-between h-50
+      className=" flex justify-between absolute h-50
      p-5  mx-auto max-w-7xl motion-safe:animate-fadeIn bg-black w-screen z-10 left-0 right-0"
     >
       <div
@@ -15,7 +15,7 @@ function Header() {
       >
         <Link href="/">
           <svg
-            className="w-44 md:w-30  object-contain cursor-pointer fill-slate-200 hover:animate-pulse"
+            className="w-44 md:w-30  object-contain cursor-pointer fill-slate-200 hover:animate-pulse hover:fill-sky-200"
             xmlns="http://www.w3.org/2000/svg"
             width="500"
             height="44"
@@ -34,7 +34,9 @@ function Header() {
          space-x-5 text-white"
         >
           <Link href="/about">
-            <h3 className="cursor-pointer hover:animate-pulse">About</h3>
+            <h3 className="cursor-pointer hover-animate-bounce hover:fill-sky-200">
+              About
+            </h3>
           </Link>
           <h3>Contact</h3>
           <a
