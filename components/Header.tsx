@@ -6,8 +6,8 @@ import PianoIcon from "@mui/icons-material/Piano";
 function Header() {
   return (
     <header
-      className=" flex justify-between absolute h-50
-     p-5  mx-auto max-w-7xl motion-safe:animate-fadeIn bg-black w-screen z-10 left-0 right-0"
+      className=" flex justify-between fixed 
+     p-3  mx-auto max-w-7xl  bg-black w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-50 z-15"
     >
       <div
         className="flex items-center
@@ -43,7 +43,7 @@ function Header() {
             target="_blank"
             href="https://www.toneden.io/justinwaves/post/sun-will-rise"
           >
-            <h3 className="text-black  bg-slate-200 py-1 rounded-full px-4">
+            <h3 className="text-black  bg-slate-200 py-1 rounded-full px-4 ">
               listen
             </h3>
           </a>

@@ -2,9 +2,9 @@ import React from "react";
 
 function MainImage() {
   return (
-    <div className="flex flex-col border-y items-center bg-main-bg w-screen h-screen overflow-hidden bg-cover relative ">
+    <div className="flex flex-col border-y items-center bg-main-bg bg-center w-screen h-screen bg-cover">
       <div
-        className="  w-screen h-screen bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 "
+        className="  w-screen h-screen bg-clip-padding backdrop-filter  bg-opacity-60 "
         w-screen
         h-screen
       ></div>
@@ -17,9 +17,9 @@ function MainImage() {
       >
         <source src="/jw-bg-vid.mp4" type="video/mp4" />
       </video> */}
-      <div className=" z-10 my-auto  hidden:7xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className=" z-2 my-auto  hidden:7xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <img
-          className=" w-60 object-contain animate-pulse"
+          className=" w-40 object-contain animate-pulse"
           src="jw-logo-round.svg"
           alt=""
         />

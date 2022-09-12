@@ -1,6 +1,7 @@
 import { ClassNames } from "@emotion/react";
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 function about() {
   return (
@@ -23,6 +24,7 @@ function about() {
         </p>
       </div>
       {/* </div> */}
+      <Footer />
     </div>
   );
 }

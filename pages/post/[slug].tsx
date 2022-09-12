@@ -1,6 +1,7 @@
 import { GetStaticProps } from "next";
 import PortableText from "react-portable-text";
 import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 import { sanityClient, urlFor } from "../../sanity";
 import { Post } from "../../typings";
 import { useForm, SubmitHandler } from "react-hook-form";
@@ -40,10 +41,11 @@ function Post({ post }: Props) {
   };
 
   return (
-    <main>
+    <main className="bg-slate-200">
       <Header />
+      <div className="h-24"></div>
       <img
-        className="w-full h-40 object-cover mt-10"
+        className="w-full h-40 object-cover "
         src={urlFor(post.mainImage).url()!}
         alt=""
       />
@@ -61,9 +63,8 @@ function Post({ post }: Props) {
             alt=""
           />
           <p className="font-extralight text-sm">
-            Blog post by{" "}
-            <span className="text-blue-500">{post.author.name}</span> Published
-            at {new Date(post._createdAt).toLocaleString()}
+            Post by <span className="text-blue-500">{post.author.name}</span>{" "}
+            Published at {new Date(post._createdAt).toLocaleString()}
           </p>
         </div>
         <div className="mt-10">
@@ -105,7 +106,7 @@ function Post({ post }: Props) {
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col p-5 max-w-2xl mx-auto mb-10"
         >
-          <h3 className="text-sm text-slate-500">Enjoyed this article?</h3>
+          <h3 className="text-sm text-slate-500">Enjoyed this Post?</h3>
           <h4 className="text-3xl font-bold">Leave a comment below!</h4>
           <hr className="py-3 mt-2" />
 
@@ -121,7 +122,7 @@ function Post({ post }: Props) {
             <input
               {...register("name", { required: true })}
               className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring"
-              placeholder="Justin Waves"
+              placeholder="Name"
               type="text"
             />
           </label>
@@ -130,7 +131,7 @@ function Post({ post }: Props) {
             <input
               {...register("email", { required: true })}
               className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring"
-              placeholder="Justin Waves"
+              placeholder="Email"
               type="email"
             />
           </label>
@@ -139,7 +140,7 @@ function Post({ post }: Props) {
             <textarea
               {...register("comment", { required: true })}
               className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-400 outline-none focus:ring"
-              placeholder="Justin Waves"
+              placeholder="enter comment"
               rows={8}
             />
           </label>
@@ -179,6 +180,7 @@ function Post({ post }: Props) {
           </div>
         ))}
       </div>
+      <Footer />
     </main>
   );
 }
