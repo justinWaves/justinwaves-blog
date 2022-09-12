@@ -20,7 +20,7 @@ function Footer() {
         </svg>
 
         <svg
-          className="w-screen relative"
+          className="w-screen relative bottom-0"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 320"
         >
@@ -55,7 +55,9 @@ function Footer() {
                   </svg>
                 </Link>
                 <div className="text-slate-300 ">
-                  <h2>About</h2>
+                  <Link href="/about">
+                    <h2 className="hover:text-sky-300 cursor-pointer">About</h2>
+                  </Link>
                   <h2>Contact</h2>
                   <h2>Mixes</h2>
                   <h2>Shows</h2>

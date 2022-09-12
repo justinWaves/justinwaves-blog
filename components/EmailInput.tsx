@@ -44,7 +44,7 @@ function EmailInput() {
           />
           <input
             {...register("email", { required: true })}
-            type="text"
+            type="email"
             className="decoration-white h-10 w-full text-xl p-2 rounded-md"
             placeholder="Email"
           />
