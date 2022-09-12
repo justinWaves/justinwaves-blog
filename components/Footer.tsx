@@ -31,7 +31,7 @@ function Footer() {
           ></path>
         </svg>
         <div className=" bg-black flex flex-col">
-          <div className="p-10 pt-20 flex flex-col md:flex-row justify-between ">
+          <div className="p-5 md:p-10 pt-20 flex flex-col md:flex-row justify-between ">
             <EmailInput />
 
             <div className="flex flex-col "></div>
@@ -79,7 +79,7 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className=" px-10 p-2 flex flex-row justify-between bg-black text-slate-600 text-xs">
+        <div className=" px-2 p-2  flex flex-row justify-between bg-black text-slate-600 text-xs">
           <p>
             Design and build by{" "}
             <a

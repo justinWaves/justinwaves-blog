@@ -30,11 +30,11 @@ function EmailInput() {
   };
 
   return !submitted ? (
-    <div className=" flex flex-col md:flex-row mx-20 md:mx-0 text-center mb-10 md:mb-0">
-      <h1 className=" text-slate-300 text-2xl mb-5 md:mb-0 md:mr-10 animate-pulse">
+    <div className=" flex flex-col md:flex-row p-2 mx-auto md:mx-0 text-center mb-10 md:mb-0 w-full md:w-2/3 max-w-md">
+      <h1 className=" text-slate-300 text-2xl mb-5 md:mb-0 md:mr-10 animate-pulse whitespace-nowrap ">
         join mailing list
       </h1>
-      <div className="flex flex-col space-x-2 w-full  md:w-1/2 ">
+      <div className="flex flex-col space-x-2  ">
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("name", { required: true })}
