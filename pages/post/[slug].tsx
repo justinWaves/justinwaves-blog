@@ -17,6 +17,9 @@ interface Props {
   post: Post;
 }
 
+const data =
+  '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1786914433/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://justinwaves.bandcamp.com/track/be-the-love-original-mix">Be The Love (Original Mix) by Justin Waves</a></iframe>';
+
 function Post({ post }: Props) {
   const [submitted, setSubmitted] = useState(false);
   const {
@@ -68,6 +71,20 @@ function Post({ post }: Props) {
           </p>
         </div>
         <div className="mt-10">
+          {/*Dangerously set embed (T_T) */}
+          <div
+            className="mx-auto mb-5"
+            dangerouslySetInnerHTML={{ __html: post.embed }}
+          />
+          {/* <iframe
+            style={{ border: 0, width: 350, height: 442 }}
+            src="https://bandcamp.com/EmbeddedPlayer/track=1786914433/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
+            seamless
+          >
+            <a href="https://justinwaves.bandcamp.com/track/be-the-love-original-mix">
+              Be The Love (Original Mix) by Justin Waves
+            </a>
+          </iframe> */}
           <PortableText
             dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
             projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
@@ -140,7 +157,7 @@ function Post({ post }: Props) {
             <textarea
               {...register("comment", { required: true })}
               className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-400 outline-none focus:ring"
-              placeholder="enter comment"
+              placeholder="Enter comment"
               rows={8}
             />
           </label>
@@ -213,6 +230,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     _id,
     _createdAt,
     title,
+    embed,
     author -> {
     name,
     image

@@ -12,6 +12,9 @@ interface Props {
 }
 
 const Home = ({ posts }: Props) => {
+  const sortedPosts = posts.sort((a, b) => {
+    return new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime();
+  });
   return (
     <div className="">
       <Head>
@@ -23,14 +26,19 @@ const Home = ({ posts }: Props) => {
       <MainImage />
 
       <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 bg-slate-200">
-        {posts.map((post) => (
+        {sortedPosts.map((post) => (
           <Link key={post._id} href={`/post/${post.slug.current}`}>
             <div
-              className="border rounded-lg group cursor-pointer overflow-hidden"
+              className="border rounded-lg group cursor-pointer overflow-hidden relative"
               data-cy="article"
             >
               <img
-                className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out "
+                className="absolute left-0 right-0 mx-auto top-0 bottom-20  my-auto opacity-30 group-hover:animate-ping  z-10 w-20 transition duration-300 ease-in-out "
+                src="jw-logo-round.svg"
+                alt=""
+              />
+              <img
+                className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
                 src={urlFor(post.mainImage).url()!}
                 alt=""
               />

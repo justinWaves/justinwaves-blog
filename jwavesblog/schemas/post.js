@@ -24,6 +24,12 @@ export default {
       },
     },
     {
+      name: "embed",
+      title: "Embed",
+      description: "Paste in HTML embed of song",
+      type: "string",
+    },
+    {
       name: "author",
       title: "Author",
       type: "reference",
