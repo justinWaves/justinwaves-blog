@@ -33,11 +33,6 @@ const Home = ({ posts }: Props) => {
               data-cy="article"
             >
               <img
-                className="absolute left-0 right-0 mx-auto top-0 bottom-20  my-auto opacity-30 group-hover:animate-ping  z-10 w-20 transition duration-300 ease-in-out "
-                src="jw-logo-round.svg"
-                alt=""
-              />
-              <img
                 className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
                 src={urlFor(post.mainImage).url()!}
                 alt=""

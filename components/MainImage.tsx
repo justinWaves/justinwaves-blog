@@ -2,7 +2,7 @@ import React from "react";
 
 function MainImage() {
   return (
-    <div className="flex flex-col border-y items-center bg-main-bg bg-center w-screen h-screen bg-cover">
+    <div className="flex flex-col border-y items-center bg-main-bg bg-center  w-screen h-screen bg-cover">
       <div
         className="  w-screen h-screen bg-clip-padding backdrop-filter  bg-opacity-60 "
         w-screen
@@ -13,7 +13,7 @@ function MainImage() {
         loop
         muted
         className="relative bottom-40
-     max-w-7xl "
+     max-w-7xl rounded-3xl "
       >
         <source src="/jw-bg-vid.mp4" type="video/mp4" />
       </video> */}
