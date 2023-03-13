@@ -18,7 +18,7 @@ const Home = ({ posts }: Props) => {
   return (
     <div className="">
       <Head>
-        <title>Justin Waves Blog</title>
+        <title>Justin Waves</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
