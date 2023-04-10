@@ -28,7 +28,11 @@ function Header() {
               transform="translate(-2009 -969)"
             />
           </svg> */}
-          <img src="/JW_text-logo-white.png" alt="" className="w-64 mr-10" />
+          <img
+            src="/JW_text-logo-white.png"
+            alt=""
+            className="w-64 mr-10 cursor-pointer"
+          />
         </Link>
         <div
           className="hidden md:inline-flex items-center

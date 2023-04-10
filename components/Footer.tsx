@@ -4,7 +4,7 @@ import EmailInput from "./EmailInput";
 
 function Footer() {
   return (
-    <div className="bg-slate-200 flex flex-col  ">
+    <div className="bg-slate-200 flex flex-col absolute bottom-0 ">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

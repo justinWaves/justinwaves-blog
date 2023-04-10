@@ -2,29 +2,15 @@ import React from "react";
 
 function MainImage() {
   return (
-    <div className="flex flex-col border-y items-center bg-main-bg bg-center  w-screen h-screen bg-cover">
-      <div
-        className="  w-screen h-screen bg-clip-padding backdrop-filter  bg-opacity-60 "
-        w-screen
-        h-screen
-      ></div>
-      {/* <video
-        autoPlay
-        loop
-        muted
-        className="relative bottom-40
-     max-w-7xl rounded-3xl "
-      >
-        <source src="/jw-bg-vid.mp4" type="video/mp4" />
-      </video> */}
-      <div className=" z-2 my-auto  hidden:7xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div className="grid border-y items-center bg-main-bg bg-center  w-screen h-[60vh] bg-cover p-5">
+      <div className=" ">
         <img
-          className=" w-40 object-contain animate-pulse"
+          className=" w-40 object-contain animate-pulse mx-auto p-3"
           src="jw-logo-round.svg"
           alt=""
         />
-        {/* 
-        <iframe
+
+        {/* <iframe
           width="100%"
           height="166"
           scrolling="no"
