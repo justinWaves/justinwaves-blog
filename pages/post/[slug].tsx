@@ -6,6 +6,9 @@ import { sanityClient, urlFor } from "../../sanity";
 import { Post } from "../../typings";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
+import BadgeIcon from "@mui/icons-material/Badge";
+import EmailIcon from "@mui/icons-material/Email";
+import CreateIcon from "@mui/icons-material/Create";
 
 interface IFormInput {
   _id: string;
@@ -44,38 +47,41 @@ function Post({ post }: Props) {
   };
 
   return (
-    <main className="bg-slate-200 relative min-h-screen">
+    <main className="bg-neutral-900 text-white relative min-h-screen">
       <div className="pb-[700px]">
         <Header />
-        <div className="h-24"></div>
+        <div className="h-20"></div>
         <img
           className="w-full h-40 object-cover "
           src={urlFor(post.mainImage).url()!}
           alt=""
         />
 
-        <article className="max-w-3xl mx-auto p-5">
-          <h1 className="text-3xl mt-10 mb-3">{post.title}</h1>
-          <h2 className="text-xl font-light text-gray-500 mb-2">
+        <article className="max-w-3xl mx-auto p-5 ">
+          <h1 className="text-5xl mt-10 mb-3 font-thin text-center">
+            {post.title}
+          </h1>
+          <h2 className="text-xl font-light text-gray-500 mb-2  text-center">
             {post.description}
           </h2>
 
-          <div className="flex items-center space-x-2">
+          {/* <div className="flex items-center space-x-2">
             <img
               className="h-10 w-10 rounded-full "
               src={urlFor(post.author.image).url()!}
               alt=""
             />
-            <p className="font-extralight text-sm">
-              Post by <span className="text-blue-500">{post.author.name}</span>{" "}
+            <p className="font-extralight text-sm ">
+              Posted by <span className="text-sky-300">{post.author.name}</span>{" "}
               Published at {new Date(post._createdAt).toLocaleString()}
             </p>
-          </div>
-          <div className="mt-10">
+          </div> */}
+          <div className="mt-10 ">
             <div
               className="mx-auto mb-5"
               dangerouslySetInnerHTML={{ __html: post.embed }}
             />
+
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
@@ -91,7 +97,10 @@ function Post({ post }: Props) {
                   <li className="ml-4 list-disc">{children}</li>
                 ),
                 link: ({ href, children }: any) => (
-                  <a href={href} className="text-blue-500 hover:underline">
+                  <a
+                    href={href}
+                    className="text-sky-300 border border-sky-300 p-4 my-4 hover:bg-slate-900"
+                  >
                     {children}
                   </a>
                 ),
@@ -100,22 +109,26 @@ function Post({ post }: Props) {
           </div>
         </article>
 
-        <hr className="max-w-lg my-5 mx-auto border border-slate-500" />
+        <hr className="max-w-lg my-5 mx-auto border border-neutral-800" />
 
         {submitted ? (
-          <div className="flex flex-col p-10 my-10 mx-auto bg-slate-500 text-white max-w-2xl   ">
-            <h3 className="text-3xl font-bold">
-              Thank you for submitting your comment!
+          <div className="flex flex-col p-10 my-10 mx-auto bg-neutral-600 text-white max-w-2xl   ">
+            <h3 className="text-3xl  font-thin text-center">
+              Thank you for submitting your comment! 🎊
             </h3>
-            <p>Once it has been approved, it will appear below!</p>
+            <p className="font-thin text-center mt-2">
+              Once it has been approved, it will appear below!
+            </p>
           </div>
         ) : (
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col p-5 max-w-2xl mx-auto mb-10"
+            className="flex flex-col p-5 max-w-2xl mx-auto mb-10 text-black"
           >
-            <h3 className="text-sm text-slate-500">Enjoyed this Post?</h3>
-            <h4 className="text-3xl font-bold">Leave a comment below!</h4>
+            {/* <h3 className="text-sm text-slate-500">Enjoyed this track</h3> */}
+            <h4 className="text-3xl  text-slate-200 font-thin">
+              Leave a comment below!
+            </h4>
             <hr className="py-3 mt-2" />
 
             <input
@@ -125,29 +138,29 @@ function Post({ post }: Props) {
               value={post._id}
             />
 
-            <label className="block mb-5">
-              <span className="text-gray-700">Name</span>
+            <label className="block mb-2">
+              <BadgeIcon fontSize="large" className="text-neutral-500" />
               <input
                 {...register("name", { required: true })}
-                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring"
+                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
                 placeholder="Name"
                 type="text"
               />
             </label>
-            <label className="block mb-5">
-              <span className="text-gray-700">Email</span>
+            <label className="block mb-2">
+              <EmailIcon fontSize="large" className="text-neutral-500" />
               <input
                 {...register("email", { required: true })}
-                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring"
+                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
                 placeholder="Email"
                 type="email"
               />
             </label>
-            <label className="block mb-5">
-              <span className="text-gray-700">Comment</span>
+            <label className="block mb-2">
+              <CreateIcon fontSize="large" className="text-neutral-500" />
               <textarea
                 {...register("comment", { required: true })}
-                className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-400 outline-none focus:ring"
+                className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
                 placeholder="Enter comment"
                 rows={8}
               />
@@ -155,7 +168,7 @@ function Post({ post }: Props) {
 
             <input
               type="submit"
-              className="shadow bg-slate-800 hover:bg-slate-900 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded cursor-pointer"
+              className="shadow bg-sky-300 hover:bg-slate-900 focus:shadow-outline focus:outline-none text-black font-bold py-4 px-4 rounded cursor-pointer w-2/3 mx-auto"
             />
 
             {/* errors return when validation fails */}
@@ -182,11 +195,22 @@ function Post({ post }: Props) {
           <h3 className="text-4xl">Comments</h3>
           <hr className="pb-2" />
           {post.comments.map((comment) => (
-            <div key={comment._id}>
-              <p>
-                <span className="text-slate-500">{comment.name}: </span>{" "}
-                {comment.comment}
-              </p>
+            <div key={comment._id} className="flex pt-3">
+              <div>
+                <img
+                  src={`https://avatars.dicebear.com/api/big-smile/:${comment.name}.svg`}
+                  alt=""
+                  className="w-12 h-12"
+                />
+                <p className="text-slate-500 font-thin">{comment.name}: </p>{" "}
+              </div>
+              <div className="bg-neutral-800 p-3 rounded-tl-xl
+
+rounded-tr-xl
+
+rounded-br-xl">
+                <p> {comment.comment}</p>
+              </div>
             </div>
           ))}
         </div>
