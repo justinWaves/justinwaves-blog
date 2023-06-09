@@ -76,9 +76,9 @@ function Post({ post }: Props) {
               Published at {new Date(post._createdAt).toLocaleString()}
             </p>
           </div> */}
-          <div className="mt-10 ">
+          <div className="mt-10">
             <div
-              className="mx-auto mb-5"
+              className="mx-auto mb-5 text-center"
               dangerouslySetInnerHTML={{ __html: post.embed }}
             />
 
@@ -99,7 +99,7 @@ function Post({ post }: Props) {
                 link: ({ href, children }: any) => (
                   <a
                     href={href}
-                    className="text-sky-300 border border-sky-300 p-4 my-4 hover:bg-slate-900"
+                    className="text-sky-300 border border-sky-300 p-4 my-4 hover:bg-slate-900" 
                   >
                     {children}
                   </a>
