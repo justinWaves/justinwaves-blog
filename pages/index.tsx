@@ -16,7 +16,7 @@ const Home = ({ posts }: Props) => {
     return new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime();
   });
   return (
-    <div className="relative min-h-screen bg-slate-200">
+    <div className="relative min-h-screen bg-neutral-900">
       <Head>
         <title>Justin Waves</title>
         <link rel="icon" href="/favicon.ico" />
@@ -24,8 +24,9 @@ const Home = ({ posts }: Props) => {
       <div className="pb-[900px] md:pb-[700px] ">
         <Header />
         <MainImage />
+        <h1 className="font-thin text-white text-center text-4xl py-4 pt-20 ">Releases</h1>
+        <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 bg-neutral-900  ">
 
-        <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 bg-slate-200 ">
           {sortedPosts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div

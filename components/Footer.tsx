@@ -4,12 +4,12 @@ import EmailInput from "./EmailInput";
 
 function Footer() {
   return (
-    <div className="bg-slate-200 flex flex-col absolute bottom-0 ">
+    <div className="bg-neutral-900 flex flex-col absolute bottom-0 ">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 434 415.969"
-          className="fill-slate-300 mx-auto h-12 w-12 sm:-mb-20 lg:-mb-40 mt-10"
+          className="fill-stone-800 mx-auto h-12 w-12 -mb-10 sm:-mb-20 lg:-mb-40 "
         >
           <defs></defs>
           <path

@@ -72,20 +72,10 @@ function Post({ post }: Props) {
             </p>
           </div>
           <div className="mt-10">
-            {/*Dangerously set embed (T_T) */}
             <div
               className="mx-auto mb-5"
               dangerouslySetInnerHTML={{ __html: post.embed }}
             />
-            {/* <iframe
-            style={{ border: 0, width: 350, height: 442 }}
-            src="https://bandcamp.com/EmbeddedPlayer/track=1786914433/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/"
-            seamless
-          >
-            <a href="https://justinwaves.bandcamp.com/track/be-the-love-original-mix">
-              Be The Love (Original Mix) by Justin Waves
-            </a>
-          </iframe> */}
             <PortableText
               dataset={process.env.NEXT_PUBLIC_SANITY_DATASET!}
               projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!}
