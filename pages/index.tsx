@@ -6,16 +6,33 @@ import Header from "../components/Header";
 import MainImage from "../components/MainImage";
 import { sanityClient, urlFor } from "../sanity";
 import { Post } from "../typings";
+import Modal from "../components/Modal";
+import { useEffect, useState } from "react";
 
 interface Props {
   posts: [Post];
 }
 
 const Home = ({ posts }: Props) => {
+  const [isShowModal, setIsShowModal] = useState<boolean>()
+  const closeModal = () => {
+    setIsShowModal(!isShowModal)
+  };
   const sortedPosts = posts.sort((a, b) => {
     return new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime();
   });
+
+  useEffect(() => {
+    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+    if (!hasVisitedBefore) {
+      setIsShowModal(true);
+      localStorage.setItem('hasVisitedBefore', 'true');
+    }
+  }, []);
+  
   return (
+    <>
+    {isShowModal && <Modal closeModal={closeModal} />}
     <div className="relative min-h-screen bg-neutral-900">
       <Head>
         <title>Justin Waves</title>
@@ -56,6 +73,7 @@ const Home = ({ posts }: Props) => {
       </div>
       <Footer />
     </div>
+    </>
   );
 };
 

@@ -2,11 +2,15 @@ import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useState } from "react";
 
+interface EmailInputProps {
+  className?: string;
+}
+
 interface EmailFormInput {
   name: string;
   email: string;
 }
-function EmailInput() {
+const EmailInput: React.FC<EmailInputProps> = ({className})  => {
   const [submitted, setSubmitted] = useState(false);
   const {
     register,
@@ -30,8 +34,8 @@ function EmailInput() {
   };
 
   return !submitted ? (
-    <div className=" flex flex-col md:flex-row p-2 mx-auto md:mx-0 text-center mb-10 md:mb-0 w-full md:w-2/3 max-w-md">
-      <h1 className=" text-slate-300 text-2xl mb-5 md:mb-0 md:mr-10 animate-pulse whitespace-nowrap ">
+    <div className={`${className}`}>
+      <h1 className=" text-slate-300 font-thin text-3xl mb-3 animate-pulse whitespace-nowrap  ">
         join mailing list
       </h1>
       <div className="flex flex-col space-x-2  ">
@@ -48,7 +52,7 @@ function EmailInput() {
             className="decoration-white h-10 w-full text-xl p-2 rounded-md"
             placeholder="Email"
           />
-          <button className="text-lg text-slate-900 h-10 w-full bg-sky-300 mt-2 rounded-md">
+          <button className="text-xl  text-slate-900 h-10 w-full bg-sky-300 hover-bg-200 mt-2 rounded-md cursor-pointer">
             send
           </button>
         </form>

@@ -6,24 +6,24 @@ import InstagramEmbed from "react-instagram-embed";
 
 function about() {
   return (
-    <div>
-      <div className=" bg-slate-200 w-screen  ">
+    <div className="relative min-h-screen bg-neutral-900 text-sky-100">
+      <div className="  w-screen pb-[700px] ">
         <Header />
-        <div className="relative flex justify-between w-full h-full bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 text-black mx-auto rounded-xl">
+        <div className="relative flex justify-between  bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 mx-auto rounded-xl">
           <div className="w-5/6 mx-auto flex flex-col text-center">
             <div className=" grid place-items-center">
               <img
                 src="/waves epk banner.jpg"
                 alt=""
-                className="w-screen max-w-7xl rounded-xl mx-auto mt-32"
+                className="w-5/6 max-w-7xl rounded-xl mx-auto mt-32"
               />
             </div>
             <div className=" grid place-items-center">
               <div>
-                <h1 className="w-fit mx-auto px-10 pt-2 text-slate-900 text-5xl mt-5 font-thin  ">
+                <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
                   Meet Justin Waves
                 </h1>
-                <p className="text-slate-900  mb-20  p-10  text-left">
+                <p className="  mb-20  p-10  text-left">
                   Driven by a curious imagination and a passion for pushing the
                   boundaries of electronic music, Justin Waves’ multi-decade
                   experience as a composer, producer, instrumentalist and
@@ -46,7 +46,7 @@ function about() {
                   passion for connecting with others through the language of
                   music, Justin Waves is dedicated to using his music as a
                   platform to free people from concern and live fully in the
-                  now.
+                  now. 🌊🌊🌊
                 </p>
               </div>
             </div>

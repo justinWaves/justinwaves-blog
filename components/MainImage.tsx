@@ -21,14 +21,34 @@ function MainImage() {
     // </div>
 
     <div className="grid items-center  w-screen pt-24  p-5">
-      <img src="Screenshot 2023-06-08 at 9.29.34 PM.png" alt="" className="mx-auto"/>
-      <form action="https://www.paypal.com/donate" method="post" target="_top" className="mx-auto mt-20">
-<input type="hidden" name="hosted_button_id" value="VXAZ7FRZRBLLN" />
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"  name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-<img alt=""  src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
-</form>
+      <img
+        src="Screenshot 2023-06-08 at 9.29.34 PM.png"
+        alt=""
+        className="mx-auto"
+      />
+      {/* <form
+        action="https://www.paypal.com/donate"
+        method="post"
+        target="_top"
+        className="mx-auto mt-20"
+      >
+        <input type="hidden" name="hosted_button_id" value="VXAZ7FRZRBLLN" />
+        <input
+          type="image"
+          src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+          name="submit"
+          title="PayPal - The safer, easier way to pay online!"
+          alt="Donate with PayPal button"
+        />
+        <img
+          alt=""
+          src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+          width="1"
+          height="1"
+        />
+      </form> */}
 
-    {/* <iframe
+      {/* <iframe
           width="100%"
            height="166"
           scrolling="no"
