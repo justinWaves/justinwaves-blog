@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 interface RoundLogoProps {
@@ -6,6 +7,7 @@ interface RoundLogoProps {
 
 const RoundLogoSvg: React.FC<RoundLogoProps> = ({className}) => {
   return (
+    <Link href="/">
     <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 434 415.969"
@@ -18,6 +20,7 @@ const RoundLogoSvg: React.FC<RoundLogoProps> = ({className}) => {
       transform="translate(-46 -60.031)"
     />
   </svg>
+  </Link>
   )
 }
 
