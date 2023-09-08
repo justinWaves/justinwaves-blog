@@ -65,7 +65,7 @@ function Post({ post }: Props) {
             {post.description}
           </h2>
 
-          <div className="mt-10">
+          <div className="mt-10 grid">
             <div
               className="mx-auto mb-5 text-center"
               dangerouslySetInnerHTML={{ __html: post.embed }}
