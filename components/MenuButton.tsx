@@ -21,7 +21,7 @@ const MenuButton: React.FC = () => {
       <div
         className={`${
           isOpen ? "scale-y-100 " : "scale-y-0 "
-        }  -left-3 origin-top-left absolute  mt-3 w-96  shadow-lg bg-black  bg-filter backdrop-blur-xl bg-opacity-90 ring-1 ring-black ring-opacity-5 divide-y divide-gray-600 focus:outline-none transition-all duration-500`}
+        }  -left-3 origin-top-left absolute  mt-3 w-96  shadow-lg bg-black  bg-filter backdrop-blur-xl bg-opacity-90 ring-1 ring-black ring-opacity-5 divide-y divide-gray-600 focus:outline-none transition-all duration-300`}
       >
         <div className="py-3 px-2">
           <Link href="/about">
@@ -29,17 +29,17 @@ const MenuButton: React.FC = () => {
               🌊 About
             </p>
           </Link>
-          <a
+          {/* <a
             href="#"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
           >
             💿 Releases
-          </a>
+          </a> */}
           <a
             href="#"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
           >
-            🎹 JW Music Co
+            🎹 JW Music Co <span className="text-sm text-red-300">(Coming Soon!)</span>
           </a>
         </div>
         <div className="py-3 px-2">

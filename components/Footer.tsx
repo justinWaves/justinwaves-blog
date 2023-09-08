@@ -35,7 +35,7 @@ function Footer() {
         <div className=" bg-black flex flex-col">
           <div className="p-5 md:p-10 pt-20 flex flex-col md:flex-row justify-between md:items-end">
             <EmailInput className=" xl:ml-20 flex flex-col  mx-auto md:mx-0 text-center mb-10 md:mb-0 w-full md:w-2/3 max-w-md" />
-            <DonateButton className="mx-auto px-5 lg:ml-10" />
+            {/* <DonateButton className="mx-auto px-5 lg:ml-10" /> */}
             <div className="flex flex-col "></div>
             <hr className="mt-10 mb-10" />
             <div className=" flex flex-row justify-between ">

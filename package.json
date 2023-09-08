@@ -18,7 +18,8 @@
     "react-dom": "18.1.0",
     "react-hook-form": "^7.34.2",
     "react-instagram-embed": "^3.0.0",
-    "react-portable-text": "^0.4.3"
+    "react-portable-text": "^0.4.3",
+    "react-social-media-embed": "^2.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",

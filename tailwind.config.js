@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "main-bg": "url('/jw-bg-2.jpg')",
+        "main-bg": "url('/websitebackground.jpg')",
       },
       animation: {
         fadeIn: "fadeIn 2s ease-in forwards",

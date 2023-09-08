@@ -65,17 +65,6 @@ function Post({ post }: Props) {
             {post.description}
           </h2>
 
-          {/* <div className="flex items-center space-x-2">
-            <img
-              className="h-10 w-10 rounded-full "
-              src={urlFor(post.author.image).url()!}
-              alt=""
-            />
-            <p className="font-extralight text-sm ">
-              Posted by <span className="text-sky-300">{post.author.name}</span>{" "}
-              Published at {new Date(post._createdAt).toLocaleString()}
-            </p>
-          </div> */}
           <div className="mt-10">
             <div
               className="mx-auto mb-5 text-center"
