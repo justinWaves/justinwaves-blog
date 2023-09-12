@@ -43,6 +43,7 @@ const MenuButton: React.FC = () => {
           </a>
         </div>
         <div className="py-3 px-2">
+        <iframe className="lg:hidden" scrolling="no" style={{border: 0, width: "100%", height: 33}} src="https://bandcamp.com/band_follow_button_classic/1352604993"></iframe>
           <a
             href="https://www.instagram.com/justinwaves/"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"

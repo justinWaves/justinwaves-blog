@@ -42,7 +42,7 @@ const Home = ({ posts }: Props) => {
         <Header />
         <MainImage />
         <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 ">Releases</h1>
-        <p className="text-sm text-left text-red-500 animate-pulse px-10">Latest Release ⤵</p>
+        <p className="text-sm text-left text-red-500 animate-pulse px-3">Latest Release ⤵</p>
         <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 bg-neutral-900  ">
 
           {sortedPosts.map((post) => (

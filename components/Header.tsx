@@ -22,11 +22,12 @@ function Header() {
       <MenuButton />
       
       <div className="hidden lg:flex relative items-center space-x-5  text-slate-200">
-        <a href="https://www.instagram.com/justinwaves/" target="_blank">
+      <iframe className="relative left-32" scrolling="no" style={{border: 0, width: "100%", height: 33}} src="https://bandcamp.com/band_follow_button_classic/1352604993"></iframe>
+        <a href="https://www.instagram.com/justinwaves/" target="_blank" className="cursor-pointer z-10">
           <InstagramIcon fontSize="large" />
         </a>
-        <a href="https://soundcloud.com/justinwaves" target="_blank">
-          <PianoIcon fontSize="large" />
+        <a href="https://soundcloud.com/justinwaves" target="_blank" className="text-4xl cursor-pointer z-10">
+        ☁️
         </a>
       </div>
     </header>
