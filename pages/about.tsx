@@ -4,7 +4,6 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import InstagramEmbed from "react-instagram-embed";
 
-
 function about() {
   return (
     <div className="relative min-h-screen bg-neutral-900 text-sky-100">
@@ -22,18 +21,39 @@ function about() {
             <div className=" grid place-items-center">
               <div>
                 <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
-                Artist Bio: Justin Waves
+                  Artist Bio: Justin Waves
                 </h1>
-                <h3 className="text-2xl text-sky-300 ">  Riding the Sonic Tides of Alternative/Indie Dance</h3>
+                <h3 className="text-2xl text-sky-300 ">
+                  Riding the Sonic Tides of Alternative/Indie Dance
+                </h3>
                 <p className="  mb-20  px-10  text-left mt-5">
-               
-Combining the infectious energy of alternative rock with the pulse of dance music, Justin Waves stands out as a Live Performer Vocalist who has shared stages with renowned acts like Bob Moses, Hayden James, Télépopmusik, Kraak & Smaak, and Alex Cruz. His original live sets have graced celebrated festivals including Outside Lands and Shabang Festival, showcasing his unique art. Also a DJ with a wealth of experience spanning over a decade, Justin Waves has been a consistent presence at numerous Burning Man events like the Temple Galaxia fundraiser and the Never Sleep Again Campouts, radiating uplifting vibes. He has also commanded the decks of San Francisco's nightlife scene, where his skillful fusion of organic deep and tech house has left an indelible imprint. Driven by a deep-seated passion for forging connections through the universal language of music, Justin Waves utilizes his compositions as a means to liberate individuals from worries, enabling them to embrace the present moment wholeheartedly. His music is a catalyst for both freedom and immersion, reflecting his unwavering commitment to bringing people together through heartfelt sonic experiences.
+                  Justin “Waves” Weisberg started his first rock band at the age
+                  of 12, and since then has never stopped writing music. In
+                  2009, while involved in a diverse array of musical projects,
+                  the SF Bay Area artist discovered a deep fascination with the
+                  SF’s vibrant electronic music community. He immersed himself
+                  in DJing and spent over a decade producing dance music. It
+                  wasn’t until 2017 that he merged both his early musical
+                  influences as an alternative/indie singer-songwriter with his
+                  electronic productions, giving birth to Justin Waves. His
+                  music spans many moods, melding different colors together for
+                  a unique experience. His productions have gotten him on stages
+                  with renowned acts like Bob Moses, Hayden James, Télépopmusik,
+                  Kraak & Smaak, Alex Cruz, and secured festival time slots at
+                  Outside Lands, Bonaroo, Northern Nights, and Shabang Festival.
+                  His music is a catalyst for both freedom and immersion,
+                  reflecting his unwavering commitment to bringing people
+                  together through heartfelt sonic experiences.
                 </p>
-<a href="https://www.dropbox.com/scl/fo/3jg7jgmf5xbol7r5mg9ib/h?rlkey=ulr8gdjs40ueh0tp7uwbjkrua&dl=0" target="_blank" rel="noopener noreferrer" >
-                <button className="text-xl  text-slate-900 h-10 w-full bg-sky-300 hover-bg-200 mt-2 rounded-md cursor-pointer">
-           View Full EPK 
-          </button>
-          </a>
+                <a
+                  href="https://www.dropbox.com/scl/fo/3jg7jgmf5xbol7r5mg9ib/h?rlkey=ulr8gdjs40ueh0tp7uwbjkrua&dl=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="text-xl  text-slate-900 h-10 w-full bg-sky-300 hover-bg-200 mt-2 rounded-md cursor-pointer">
+                    View Full EPK
+                  </button>
+                </a>
               </div>
             </div>
           </div>
