@@ -21,12 +21,12 @@ function MainImage() {
     //   </div>
     // </div>
     <div className="relative bg-main-bg bg-cover h-screen w-screen  bg-center overflow-hidden grid place-items-center">
-<iframe  src="https://open.spotify.com/embed/artist/13TnKCSQSOkWzKgK09wNzQ?utm_source=generator&theme=0" width="80%" height="60%" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe  src="https://open.spotify.com/embed/artist/13TnKCSQSOkWzKgK09wNzQ?utm_source=generator&theme=0" width="90%" height="75%" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 <div className="absolute bottom-2 mx-auto">
 
       
-      <h1 className="animate-bounce text-5xl md:text-4xl text-white text-center">⇓</h1>
-      <h1 className=" text-3xl md:text-4xl text-white font-thin  mb-2  rounded-full px-3 animate-pulse bg-black p-2">Scroll to purchase music in any format</h1>
+      {/* <h1 className="animate-bounce text-5xl md:text-4xl text-white text-center">⇓</h1> */}
+      <h1 className=" text-xl md:text-4xl text-white font-thin  mb-2  rounded-full px-3 animate-pulse bg-black">purchase music in any format below</h1>
       </div>
     </div>
   );

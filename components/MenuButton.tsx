@@ -2,6 +2,7 @@ import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const MenuButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +27,7 @@ const MenuButton: React.FC = () => {
         <div className="py-3 px-2">
           <Link href="/about">
             <p className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer">
-              🌊 About
+              🌊 Bio + EPK
             </p>
           </Link>
           {/* <a
@@ -43,18 +44,54 @@ const MenuButton: React.FC = () => {
           </a>
         </div>
         <div className="py-3 px-2">
+          <div className="px-3 py-3">
         <iframe className="lg:hidden" scrolling="no" style={{border: 0, width: "100%", height: 33}} src="https://bandcamp.com/band_follow_button_classic/1352604993"></iframe>
-          <a
-            href="https://www.instagram.com/justinwaves/"
+        </div>
+        <a
+            href="https://open.spotify.com/artist/13TnKCSQSOkWzKgK09wNzQ?si=PV0-1SB0Sc2NAPrR9-MntQ"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
-            <InstagramIcon /> Instagram
+            <img src="Spotify_Logo_RGB_White.png" className="w-40"/>
+          </a>
+          <a
+            href="https://music.apple.com/us/artist/justin-waves/1498973677"
+            className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <img src="apple-music-logo.png" className="w-40"/>
+          </a>
+          <a
+            href="https://www.tiktok.com/@justinwaves"
+            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <div className="flex align-middle">
+            <img src="tiktok-64.png" className="w-10 mr-2 "/> Tiktok</div>
+          </a>
+          <a
+            href="https://www.instagram.com/justinwaves/"
+            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <InstagramIcon className="text-3xl mb-1"/> Instagram
+          </a>
+     
+          <a
+            href="https://www.youtube.com/channel/UCTL59752f6PIWECN-fzONQA"
+            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            rel="noreferrer noopener"
+            target="_blank"
+          >
+            <YouTubeIcon className="text-3xl mb-1"/> YouTube
           </a>
           <a
             href="https://soundcloud.com/justinwaves"
-            className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
