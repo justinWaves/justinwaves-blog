@@ -157,7 +157,7 @@ function Post({ post }: Props) {
 
             <input
               type="submit"
-              className="shadow bg-sky-300 hover:bg-slate-900 focus:shadow-outline focus:outline-none text-black font-bold py-4 px-4 rounded cursor-pointer w-2/3 mx-auto"
+              className="shadow bg-[#CC8470] hover:bg-slate-900 focus:shadow-outline focus:outline-none text-black font-bold py-4 px-4 rounded cursor-pointer w-2/3 mx-auto"
             />
 
             {/* errors return when validation fails */}

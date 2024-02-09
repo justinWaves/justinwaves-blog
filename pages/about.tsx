@@ -21,36 +21,20 @@ function about() {
             <div className=" grid place-items-center">
               <div>
                 <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
-                  Artist Bio: Justin Waves
+                  Artist Bio:
                 </h1>
-                <h3 className="text-2xl text-sky-300 ">
+                {/* <h3 className="text-2xl text-sky-300 ">
                   Riding the Sonic Tides of Alternative/Indie Dance
-                </h3>
+                </h3> */}
                 <p className="  mb-20  px-10  text-left mt-5">
-                  Justin “Waves” Weisberg started his first rock band at the age
-                  of 12, and since then has never stopped writing music. In
-                  2009, while involved in a diverse array of musical projects,
-                  the SF Bay Area artist discovered a deep fascination with the
-                  SF’s vibrant electronic music community. He immersed himself
-                  in DJing and spent over a decade producing dance music. It
-                  wasn’t until 2017 that he merged both his early musical
-                  influences as an alternative/indie singer-songwriter with his
-                  electronic productions, giving birth to Justin Waves. His
-                  music spans many moods, melding different colors together for
-                  a unique experience. His productions have gotten him on stages
-                  with renowned acts like Bob Moses, Hayden James, Télépopmusik,
-                  Kraak & Smaak, Alex Cruz, and secured festival time slots at
-                  Outside Lands, Bonaroo, Northern Nights, and Shabang Festival.
-                  His music is a catalyst for both freedom and immersion,
-                  reflecting his unwavering commitment to bringing people
-                  together through heartfelt sonic experiences.
+                "Justin Waves is a visionary Sonic Alchemist, seamlessly blending the ethereal harmonies of sound waves with the elemental rhythms of nature. With roots in the vibrant culture of San Francisco, Justin draws inspiration from the city's eclectic energy, infusing his compositions with the transformative spirit of creativity and innovation. As a sonic explorer, classically trained composer, and proficient guitarist, Justin approaches his craft with precision and curiosity, meticulously experimenting with the mathematical forces of nature inherent in musical harmony. A dynamic live vocalist, Justin's performances transcend traditional boundaries, inviting audiences on a transcendent journey of spiritual enlightenment and cosmic understanding. Through his immersive performances and visual storytelling, Justin Waves invites listeners to delve into the depths of their own creativity and inner transformation."
                 </p>
                 <a
                   href="https://www.dropbox.com/scl/fo/3jg7jgmf5xbol7r5mg9ib/h?rlkey=ulr8gdjs40ueh0tp7uwbjkrua&dl=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="text-xl  text-slate-900 h-10 w-full bg-sky-300 hover-bg-200 mt-2 rounded-md cursor-pointer">
+                  <button className="text-xl  text-slate-900 h-10 w-full bg-[#CC8470] hover-bg-200 mt-2 rounded-md cursor-pointer">
                     View Full EPK
                   </button>
                 </a>

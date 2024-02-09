@@ -52,7 +52,7 @@ const EmailInput: React.FC<EmailInputProps> = ({className})  => {
             className="decoration-white h-10 w-full text-xl p-2 rounded-md"
             placeholder="Email"
           />
-          <button className="text-xl  text-slate-900 h-10 w-full bg-sky-300 hover-bg-200 mt-2 rounded-md cursor-pointer">
+          <button className="text-xl  text-slate-900 h-10 w-full bg-[#CC8470] hover-bg-200 mt-2 rounded-md cursor-pointer">
             send
           </button>
         </form>

@@ -14,7 +14,7 @@ const MenuButton: React.FC = () => {
   return (
     <div className="relative">
       <button
-        className="flex items-center justify-center px-4 py-4 text-slate-300 hover:text-sky-300 border border-slate-900 hover:border-sky-300 md:rounded-md hover:bg-black focus:outline-none focus:ring cursor-pointer z-99 transition-all duration-300"
+        className="flex items-center justify-center px-4 py-4 text-slate-300  border border-[#FFFFFF]  md:rounded-xl hover:bg-[#CC8470] focus:outline-none focus:ring cursor-pointer z-99 transition-all duration-300"
         onClick={toggleMenu}
       >
         <MenuIcon fontSize="medium" />
@@ -53,7 +53,7 @@ const MenuButton: React.FC = () => {
             rel="noreferrer noopener"
             target="_blank"
           >
-            <img src="Spotify_Logo_RGB_White.png" className="w-40"/>
+            <img src="Spotify_Logo_RGB_White.png" className="w-32"/>
           </a>
           <a
             href="https://music.apple.com/us/artist/justin-waves/1498973677"
@@ -61,20 +61,20 @@ const MenuButton: React.FC = () => {
             rel="noreferrer noopener"
             target="_blank"
           >
-            <img src="apple-music-logo.png" className="w-40"/>
+            <img src="apple-music-logo.png" className="w-32"/>
           </a>
           <a
             href="https://www.tiktok.com/@justinwaves"
-            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
             <div className="flex align-middle">
-            <img src="tiktok-64.png" className="w-10 mr-2 "/> Tiktok</div>
+            <img src="tiktok-64.png" className="w-8 h-8 mr-2  "/> Tiktok</div>
           </a>
           <a
             href="https://www.instagram.com/justinwaves/"
-            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -83,7 +83,7 @@ const MenuButton: React.FC = () => {
      
           <a
             href="https://www.youtube.com/channel/UCTL59752f6PIWECN-fzONQA"
-            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -91,7 +91,7 @@ const MenuButton: React.FC = () => {
           </a>
           <a
             href="https://soundcloud.com/justinwaves"
-            className="block px-4 py-4 text-3xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >

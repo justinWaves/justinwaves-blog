@@ -27,12 +27,12 @@ function Footer() {
           viewBox="0 0 1440 320"
         >
           <path
-            fill="#000000"
+            fill="#141C2F"
             fill-opacity="1"
             d="M0,256L48,250.7C96,245,192,235,288,245.3C384,256,480,288,576,298.7C672,309,768,299,864,277.3C960,256,1056,224,1152,202.7C1248,181,1344,171,1392,165.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
           ></path>
         </svg>
-        <div className=" bg-black flex flex-col">
+        <div className=" bg-[#141C2F] flex flex-col">
           <div className="p-5 md:p-10 pt-20 flex flex-col md:flex-row justify-between md:items-end">
             <EmailInput className=" xl:ml-20 flex flex-col  mx-auto md:mx-0 text-center mb-10 md:mb-0 w-full md:w-2/3 max-w-md" />
             {/* <DonateButton className="mx-auto px-5 lg:ml-10" /> */}
@@ -40,9 +40,9 @@ function Footer() {
             <hr className="mt-10 mb-10" />
             <div className=" flex flex-row justify-between ">
               <div>
-                <Link href="/">
+                {/* <Link href="/">
                   <svg
-                    className="w-24 md:w-30   object-contain cursor-pointer fill-slate-200 hover:animate-pulse hover:fill-sky-200"
+                    className="w-24 md:w-30   object-contain cursor-pointer fill-slate-200 hover:animate-pulse hover:fill-[#CC8470]"
                     xmlns="http://www.w3.org/2000/svg"
                     width="500"
                     height="44"
@@ -55,29 +55,29 @@ function Footer() {
                       transform="translate(-2009 -969)"
                     />
                   </svg>
-                </Link>
-                <div className="text-slate-300 ">
+                </Link> */}
+                {/* <div className="text-slate-300 ">
                   <Link href="/about">
-                    <h2 className="hover:text-sky-300 cursor-pointer">About</h2>
+                    <h2 className="hover:text-[#CC8470] cursor-pointer">About</h2>
                   </Link>
                   <h2>Contact</h2>
                   <h2>Mixes</h2>
                   <h2>Shows</h2>
                   <h2>Shop</h2>
-                </div>
+                </div> */}
               </div>
               <Link href="/">
-            <RoundLogoSvg className="fill-slate-300 w-20 relative top-10 hover:fill-sky-300 hover:animate-pulse cursor-pointer"/>
+            <RoundLogoSvg className="fill-slate-300 w-20 relative top-10 hover:fill-[#CC8470] hover:animate-pulse cursor-pointer"/>
               </Link>
             </div>
           </div>
         </div>
-        <div className=" px-2 p-2  flex flex-row justify-between bg-black text-slate-600 text-xs">
+        <div className=" px-2 p-2  flex flex-row justify-between bg-[#141C2F] text-slate-600 text-xs">
           <p>
             Design and build by{" "}
             <a
               href="https://justinwaves.github.io/jw-portfolio-2021/"
-              className="text-sky-300"
+              className="text-[#CC8470]"
             >
               Justin Weisberg
             </a>
