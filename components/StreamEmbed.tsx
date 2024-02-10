@@ -30,14 +30,14 @@ function StreamEmbed() {
       loading="lazy"
       style={iframeStyleSpotify}
     ></iframe>
-    <iframe
+    {/* <iframe
       id="embedPlayer"
       src="https://embed.music.apple.com/us/album/through-the-fire-single/1719458435?app=music&amp;itsct=music_box_player&amp;itscg=30200&amp;ls=1&amp;theme=auto"
       height="450px"
       sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
       allow="autoplay *; encrypted-media *; clipboard-write"
       style={iframeStyleApple}
-    ></iframe>
+    ></iframe> */}
   </div></div>
   )
 }
