@@ -35,3 +35,10 @@ export interface Comment {
     _type: string;
     _updatedAt: string;
 }
+
+export interface Release {
+    releaseUrl? : string,
+    releaseName : string,
+    releaseType : string,
+    isDebut: boolean
+}

@@ -21,7 +21,7 @@ function about() {
             <div className=" grid place-items-center">
               <div>
                 <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
-                  Legend of Justin Waves
+                  Artist Bio
                 </h1>
            
                 <p className="  mb-20    text-left mt-5">

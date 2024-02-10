@@ -9,23 +9,22 @@ function Header() {
   return (
     <header
       className=" flex justify-between fixed 
-     p-3  mx-auto max-w-7xl   w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-90 z-15 md:rounded-br-md h-16"
+     p-3  mx-auto   w-screen z-10 left-0 right-0 bg-filter backdrop-blur-xl bg-opacity-90 md:rounded-br-md h-16"
     >
-      <div className="w-fill absolute mx-auto left-0 right-0 flex justify-center h-10 hover:animate-pulse cursor-pointer my-auto">
-<div className="w-32">
-      <img src="/justin.png" />
+         
+      <div className="w-fill absolute left-0 right-0 top-4 mx-auto my-auto flex justify-center h-10  cursor-pointer ">
+<div className="w-24 md:w-32 my-auto">
+      <img src="/justin.png" alt="" className="" />
       </div>
         <RoundLogoSvg className="fill-white w-14 hover:fill-[#CC8470]  " />
-        <div className="w-32">
-        <img src="/waves.png" />
+        <div className="w-24 md:w-32 my-auto">
+        <img src="/waves.png" alt="" className="-ml-2"/>
         </div>
       </div>
-      
-      <MenuButton />
-      {/* <div className="w-72 my-auto">
-          <img src="/JW__text-stencil-white.png" className="" />
-        </div> */}
-      <div className="hidden lg:flex relative items-center space-x-5  text-slate-200">
+   
+  
+
+      <div className="hidden lg:flex absolute right-3 items-center space-x-5  text-slate-200">
         <iframe
           className="relative left-32"
           scrolling="no"

@@ -1,7 +1,7 @@
 export default {
   name: "emails",
   type: "document",
-  title: "emails",
+  title: "Emails",
   fields: [
     {
       name: "name",

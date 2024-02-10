@@ -14,7 +14,7 @@ function Footer() {
        
      
             <EmailInput className=" bg-[#141C2F] bg-filter backdrop-blur-xl bg-opacity-90 p-5 rounded-3xl flex flex-col  mx-auto  text-center mb-8 md:mb-0 w-full  max-w-md" />
-            <DonateButton className="mx-auto px-5 lg:ml-10" />
+            <DonateButton className="mx-auto lg:ml-10  bg-opacity-40 bg-black p-1 rounded-md px-3 bg-filter backdrop-blur-md" />
             <div className="flex flex-col "></div>
             {/* <hr className="mt-10 mb-10" /> */}
             <div className=" flex flex-row justify-between ">

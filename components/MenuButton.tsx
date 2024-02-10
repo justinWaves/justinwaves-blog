@@ -1,5 +1,6 @@
 import { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from '@mui/icons-material/Close';
 import Link from "next/link";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from '@mui/icons-material/YouTube';
@@ -12,36 +13,42 @@ const MenuButton: React.FC = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="fixed left-2   top-2 z-20">
       <button
         className="flex items-center justify-center px-3 py-3 text-white  border border-[#FFFFFF]  rounded-xl hover:bg-[#CC8470] focus:outline-none focus:ring cursor-pointer z-99 transition-all duration-300"
         onClick={toggleMenu}
       >
-        <MenuIcon fontSize="medium" />
+        {isOpen ?  (<CloseIcon fontSize="medium" />) :( <MenuIcon fontSize="medium" />) }
+     
       </button>
       <div
         className={`${
-          isOpen ? "scale-y-100 " : "scale-y-0 "
-        }  -left-3 origin-top-left absolute rounded-b-xl  w-96  shadow-lg bg-[#141C2F]  bg-filter backdrop-blur-xl bg-opacity-90 ring-1 ring-black ring-opacity-5 divide-y divide-gray-600 focus:outline-none transition-all duration-300`}
+          isOpen ? "visible opacity-100 backdrop-blur-xl " : "invisible opacity-0 backdrop-blur-sm "
+        }  -left-2  relative md:rounded-br-xl w-screen md:w-96  shadow-lg  bg-filter  bg-opacity-40 border-white border-b-2 md:border-r-2 ring-1 ring-black ring-opacity-5 divide-y  focus:outline-none transition-all duration-300 `}
       >
         <div className="py-3 px-2">
           <Link href="/about">
-            <p className="block px-4 py-4 text-xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer">
-              🌊 - Story of Justin Waves
+            <p className="block px-4 py-4 text-xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer">
+              ABOUT
             </p>
           </Link>
+          <a href="mailto:jwmusicco@gmail.com">
+            <p className="block px-4 py-4 text-xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer">
+              CONTACT
+            </p>
+          </a>
           {/* <a
             href="#"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"
           >
             💿 Releases
           </a> */}
-          <a
+          {/* <a
             href="#"
             className="block px-4 py-4 text-xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
           >
             🎹 - JW Music Co <span className="text-sm text-red-300">(Coming Soon!)</span>
-          </a>
+          </a> */}
         </div>
         <div className="py-3 px-2">
           <div className="px-3 py-3">
@@ -49,7 +56,7 @@ const MenuButton: React.FC = () => {
         </div>
         <a
             href="https://open.spotify.com/artist/13TnKCSQSOkWzKgK09wNzQ?si=PV0-1SB0Sc2NAPrR9-MntQ"
-            className="block px-4 py-4 text-xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -57,7 +64,7 @@ const MenuButton: React.FC = () => {
           </a>
           <a
             href="https://music.apple.com/us/artist/justin-waves/1498973677"
-            className="block px-4 py-4 text-xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -65,7 +72,7 @@ const MenuButton: React.FC = () => {
           </a>
           <a
             href="https://www.tiktok.com/@justinwaves"
-            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -74,7 +81,7 @@ const MenuButton: React.FC = () => {
           </a>
           <a
             href="https://www.instagram.com/justinwaves/"
-            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -83,7 +90,7 @@ const MenuButton: React.FC = () => {
      
           <a
             href="https://www.youtube.com/channel/UCTL59752f6PIWECN-fzONQA"
-            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >
@@ -91,7 +98,7 @@ const MenuButton: React.FC = () => {
           </a>
           <a
             href="https://soundcloud.com/justinwaves"
-            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-[#CC8470] cursor-pointer"
+            className="block px-4 py-4 text-2xl font-thin text-white hover:bg-white hover:bg-opacity-25 hover:rounded-2xl  cursor-pointer"
             rel="noreferrer noopener"
             target="_blank"
           >

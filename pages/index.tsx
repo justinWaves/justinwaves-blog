@@ -5,15 +5,18 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainImage from "../components/MainImage";
 import { sanityClient, urlFor } from "../sanity";
-import { Post } from "../typings";
+import { Post, Release } from "../typings";
 import Modal from "../components/Modal";
 import { useEffect, useState } from "react";
+import StreamEmbed from "../components/StreamEmbed";
+import MenuButton from "../components/MenuButton";
 
 interface Props {
   posts: [Post];
+  release: Release
 }
 
-const Home = ({ posts }: Props) => {
+const Home = ({ posts, release }: Props) => {
   const [isShowModal, setIsShowModal] = useState<boolean>()
   const closeModal = () => {
     setIsShowModal(!isShowModal)
@@ -29,19 +32,22 @@ const Home = ({ posts }: Props) => {
       localStorage.setItem('hasVisitedBefore', 'true');
     }
   }, []);
-  
+  console.log(release)
   return (
     <>
     {isShowModal && <Modal closeModal={closeModal} />}
-    <div className="relative min-h-screen bg-main-bg bg-cover bg-center">
+    <div className="relative min-h-screen bg-main-bg bg-cover bg-fixed bg-center">
       <Head>
         <title>Justin Waves</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="pb-[300px] md:pb-[350px] ">
+      <MenuButton />  
         <Header />
-        <MainImage />
-        <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">RELEASES</h1>
+    
+        <MainImage releaseName={release.releaseName} releaseType={release.releaseType} releaseUrl={release.releaseUrl} isDebut={release.isDebut} />
+        <StreamEmbed />
+        <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">PURCHASE RELEASES</h1>
         <p className="text-sm text-left text-[#A34141] animate-pulse px-5">Latest Release ⤵</p>
         <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6   ">
 
@@ -82,24 +88,35 @@ const Home = ({ posts }: Props) => {
 export default Home;
 
 export const getServerSideProps = async () => {
-  const query = `*[_type == "post"]{
+  const postQuery = `*[_type == "post"]{
     _id,
     title,
     _createdAt,
     author -> {
-    name,
-    image
-  },
-  description, 
-  mainImage,
-  slug
+      name,
+      image
+    },
+    description, 
+    mainImage,
+    slug
   }`;
 
-  const posts = await sanityClient.fetch(query);
+  const mainImageQuery = `*[_type == "mainImage"]{
+    releaseName,
+    releaseUrl,
+    releaseType,
+    isDebut
+  }`;
+
+  const [posts, mainImage] = await Promise.all([
+    sanityClient.fetch(postQuery),
+    sanityClient.fetch(mainImageQuery)
+  ]);
 
   return {
     props: {
       posts,
+      release: mainImage[0] || {}, // Ensure release is an object
     },
   };
 };
