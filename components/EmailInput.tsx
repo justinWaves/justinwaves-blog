@@ -35,7 +35,7 @@ const EmailInput: React.FC<EmailInputProps> = ({className})  => {
 
   return !submitted ? (
     <div className={`${className}`}>
-      <h1 className=" text-slate-300 font-thin text-3xl mb-3 animate-pulse whitespace-nowrap  ">
+      <h1 className=" text-white font-thin text-2xl mb-3 animate-pulse whitespace-nowrap  ">
         join mailing list
       </h1>
       <div className="flex flex-col space-x-2  ">
@@ -43,17 +43,17 @@ const EmailInput: React.FC<EmailInputProps> = ({className})  => {
           <input
             {...register("name", { required: true })}
             type="text"
-            className="decoration-white h-10 w-full text-xl p-2 rounded-md mb-2"
+            className="decoration-white h-8 w-72 text-md p-2 rounded-md mb-2"
             placeholder="Name"
           />
           <input
             {...register("email", { required: true })}
             type="email"
-            className="decoration-white h-10 w-full text-xl p-2 rounded-md"
+            className="decoration-white h-8 w-72 text-md p-2 rounded-md"
             placeholder="Email"
           />
-          <button className="text-xl  text-slate-900 h-10 w-full bg-[#CC8470] hover-bg-200 mt-2 rounded-md cursor-pointer">
-            send
+          <button className="text-xl  text-slate-900 h-8 w-72 bg-[#CC8470] hover:bg-[#A34141] mt-2 rounded-md cursor-pointer">
+       JOIN
           </button>
         </form>
       </div>

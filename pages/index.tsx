@@ -33,22 +33,22 @@ const Home = ({ posts }: Props) => {
   return (
     <>
     {isShowModal && <Modal closeModal={closeModal} />}
-    <div className="relative min-h-screen bg-neutral-900">
+    <div className="relative min-h-screen bg-main-bg bg-cover bg-center">
       <Head>
         <title>Justin Waves</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="pb-[900px] md:pb-[700px] ">
+      <div className="pb-[300px] md:pb-[350px] ">
         <Header />
         <MainImage />
-        <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">Releases</h1>
+        <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">RELEASES</h1>
         <p className="text-sm text-left text-[#A34141] animate-pulse px-5">Latest Release ⤵</p>
-        <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6 bg-neutral-900  ">
+        <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6   ">
 
           {sortedPosts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
               <div
-                className="border rounded-lg group cursor-pointer overflow-hidden relative"
+                className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
                 data-cy="article"
               >
                 <img
@@ -56,7 +56,7 @@ const Home = ({ posts }: Props) => {
                   src={urlFor(post.mainImage).url()!}
                   alt=""
                 />
-                <div className="flex justify-between p-5 bg-white">
+                <div className="flex justify-between p-5 ">
                   <div>
                     <p className="text-lg font-bold ">{post.title}</p>
                     <p className="text-xs">{post.description}</p>
@@ -71,6 +71,7 @@ const Home = ({ posts }: Props) => {
             </Link>
           ))}
         </div>
+        <img src="/secret.png" alt="" className=" w-72 mx-auto" />
       </div>
       <Footer />
     </div>
