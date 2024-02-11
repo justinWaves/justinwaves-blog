@@ -13,74 +13,81 @@ import MenuButton from "../components/MenuButton";
 
 interface Props {
   posts: [Post];
-  release: Release
+  release: Release;
 }
 
 const Home = ({ posts, release }: Props) => {
-  const [isShowModal, setIsShowModal] = useState<boolean>()
+  const [isShowModal, setIsShowModal] = useState<boolean>();
   const closeModal = () => {
-    setIsShowModal(!isShowModal)
+    setIsShowModal(!isShowModal);
   };
   const sortedPosts = posts.sort((a, b) => {
     return new Date(b._createdAt).getTime() - new Date(a._createdAt).getTime();
   });
 
   useEffect(() => {
-    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+    const hasVisitedBefore = localStorage.getItem("hasVisitedBefore");
     if (!hasVisitedBefore) {
       setIsShowModal(true);
-      localStorage.setItem('hasVisitedBefore', 'true');
+      localStorage.setItem("hasVisitedBefore", "true");
     }
   }, []);
-  console.log(release)
+  console.log(release);
   return (
     <>
-    {isShowModal && <Modal closeModal={closeModal} />}
-    <div className="relative min-h-screen bg-main-bg bg-cover bg-fixed bg-center">
-      <Head>
-        <title>Justin Waves</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="pb-[300px] md:pb-[350px] ">
-      <MenuButton />  
-        <Header />
-    
-        <MainImage releaseName={release.releaseName} releaseType={release.releaseType} releaseUrl={release.releaseUrl} isDebut={release.isDebut} />
-        <StreamEmbed />
-        <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">PURCHASE RELEASES</h1>
-        <p className="text-sm text-left text-[#A34141] animate-pulse px-5">Latest Release ⤵</p>
-        <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6   ">
-
-          {sortedPosts.map((post) => (
-            <Link key={post._id} href={`/post/${post.slug.current}`}>
-              <div
-                className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
-                data-cy="article"
-              >
-                <img
-                  className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
-                  src={urlFor(post.mainImage).url()!}
-                  alt=""
-                />
-                <div className="flex justify-between p-5 ">
-                  <div>
-                    <p className="text-lg font-bold ">{post.title}</p>
-                    <p className="text-xs">{post.description}</p>
-                  </div>
+      {isShowModal && <Modal closeModal={closeModal} />}
+      <div className="relative">
+        <Head>
+          <title>Justin Waves</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="pb-[300px] md:pb-[350px] relative min-h-screen bg-main-bg bg-cover bg-fixed bg-center">
+          <MenuButton />
+          <Header />
+          <MainImage
+            releaseName={release.releaseName}
+            releaseType={release.releaseType}
+            releaseUrl={release.releaseUrl}
+            isDebut={release.isDebut}
+          />
+          <StreamEmbed />
+          <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">
+            PURCHASE RELEASES
+          </h1>
+          <p className="text-sm text-left text-[#A34141] animate-pulse px-5">
+            Latest Release ⤵
+          </p>
+          <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6   ">
+            {sortedPosts.map((post) => (
+              <Link key={post._id} href={`/post/${post.slug.current}`}>
+                <div
+                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
+                  data-cy="article"
+                >
                   <img
-                    className="h-12 w-12 rounded-full"
-                    src={urlFor(post.author.image).url()!}
+                    className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
+                    src={urlFor(post.mainImage).url()!}
                     alt=""
                   />
+                  <div className="flex justify-between p-5 ">
+                    <div>
+                      <p className="text-lg font-bold ">{post.title}</p>
+                      <p className="text-xs">{post.description}</p>
+                    </div>
+                    <img
+                      className="h-12 w-12 rounded-full"
+                      src={urlFor(post.author.image).url()!}
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
+          <img src="/secret.png" alt="" className=" w-72 mx-auto" />
         </div>
-        <img src="/secret.png" alt="" className=" w-72 mx-auto" />
+        <Footer />
       </div>
-      <Footer />
-    </div>
     </>
   );
 };
@@ -110,7 +117,7 @@ export const getServerSideProps = async () => {
 
   const [posts, mainImage] = await Promise.all([
     sanityClient.fetch(postQuery),
-    sanityClient.fetch(mainImageQuery)
+    sanityClient.fetch(mainImageQuery),
   ]);
 
   return {

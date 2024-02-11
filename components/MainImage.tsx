@@ -9,7 +9,7 @@ interface MainImageProps{
 
 const MainImage: React.FC<MainImageProps> = ({releaseUrl, releaseName,releaseType,isDebut }) => {
   return (
-    <div className="relative pb-10 w-screen overflow-hidden flex justify-center items-center h-screen">
+    <div className="relative pb-10 w-screen overflow-hidden flex justify-center items-center h-screen pt-16">
       <div className="mx-auto">
         <img
           src="/stencil-logo-white.png"
