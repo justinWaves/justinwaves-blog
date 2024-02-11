@@ -23,8 +23,8 @@ const MenuButton: React.FC = () => {
       </button>
       <div
         className={`${
-          isOpen ? "visible opacity-100 backdrop-blur-xl " : "invisible opacity-0 backdrop-blur-sm "
-        }  -left-2  relative md:rounded-br-xl w-screen md:w-96  shadow-lg  bg-filter  bg-opacity-40 border-white border-b-2 md:border-r-2 ring-1 ring-black ring-opacity-5 divide-y  focus:outline-none transition-all duration-300 `}
+          isOpen ? "visible opacity-100 backdrop-blur-xl bg-black " : "invisible opacity-0 backdrop-blur-sm "
+        }  -left-2 top-1 relative md:rounded-br-xl w-screen md:w-96   bg-filter  bg-opacity-20 border-white border-b-2 md:border-r-2 ring-1 ring-black ring-opacity-5 divide-y  focus:outline-none transition-all duration-300 `}
       >
         <div className="py-3 px-2">
           <Link href="/about">
