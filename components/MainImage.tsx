@@ -9,12 +9,12 @@ interface MainImageProps{
 
 const MainImage: React.FC<MainImageProps> = ({releaseUrl, releaseName,releaseType,isDebut }) => {
   return (
-    <div className="relative pb-10 w-screen overflow-hidden flex justify-center items-center h-screen pt-16">
+    <div className="relative pb-10 w-screen overflow-hidden flex justify-center items-center h-screen pt-10">
       <div className="mx-auto">
         <img
           src="/stencil-logo-white.png"
           alt=""
-          className="w-5/6 mx-auto my-auto"
+          className="w-4/6 md:w-5/6 mx-auto my-auto"
         />
         <h1 className="mt-10 text-4xl md:text-5xl font-thin text-white text-center">{releaseName.toLocaleUpperCase()}</h1>
         <p className="text-white text-center font-thin text-lg mt-5">{ isDebut? "DEBUT": "NEW"} {releaseType.toLocaleUpperCase()} </p>

@@ -40,7 +40,6 @@ const Home = ({ posts, release }: Props) => {
         <Head>
           <title>Justin Waves</title>
           <link rel="icon" href="/favicon.ico" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
         </Head>
         <div className="pb-[300px] md:pb-[350px] relative min-h-screen bg-main-bg bg-cover bg-fixed bg-center">
           <MenuButton />
