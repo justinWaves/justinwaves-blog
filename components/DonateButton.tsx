@@ -12,7 +12,7 @@ const DonateButton: React.FC<DonateButtonProps> = ({className}) => {
     target="_top"
     className={`${className}`}
   >
-     <p className='text-xs text-white mb-2'>Tips Appreciated! 🎩🌊💙 </p>
+     <p className='text-xs text-white mb-2 text-center'>Feeling tipsy? 🎩🌊 </p>
     <input type="hidden" name="hosted_button_id" value="VXAZ7FRZRBLLN" />
     <input
       type="image"

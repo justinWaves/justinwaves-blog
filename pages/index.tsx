@@ -9,7 +9,7 @@ import { Post, Release } from "../typings";
 import Modal from "../components/Modal";
 import { useEffect, useState } from "react";
 import StreamEmbed from "../components/StreamEmbed";
-import MenuButton from "../components/MenuButton";
+import MenuButton from "../components/NavBarItems";
 
 interface Props {
   posts: [Post];
@@ -41,7 +41,14 @@ const Home = ({ posts, release }: Props) => {
           <title>Justin Waves</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="pb-[300px] md:pb-[350px] relative min-h-screen bg-main-bg bg-cover bg-fixed bg-center">
+        <div className="pb-[300px] md:pb-[350px] relative min-h-screen">
+          {/* background-image */}
+        <div className="fixed inset-0 z-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-main-bg"
+
+        />
+      </div>
           <MenuButton />
           <Header />
           <MainImage
@@ -61,7 +68,7 @@ const Home = ({ posts, release }: Props) => {
             {sortedPosts.map((post) => (
               <Link key={post._id} href={`/post/${post.slug.current}`}>
                 <div
-                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
+                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-[#141C2F] backdrop-blur-xl bg-opacity-30 text-white"
                   data-cy="article"
                 >
                   <img

@@ -13,8 +13,8 @@ function Footer() {
           <div className="p-5 md:p-10  flex flex-col md:flex-row justify-cemter md:items-end">
        
      
-            <EmailInput className=" bg-[#141C2F] bg-filter backdrop-blur-xl bg-opacity-90 p-5 rounded-3xl flex flex-col  mx-auto  text-center mb-8 md:mb-0 w-full  max-w-md" />
-            <DonateButton className="mx-auto lg:ml-10  bg-opacity-40 bg-black p-1 rounded-md px-3 bg-filter backdrop-blur-md" />
+            <EmailInput className=" bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 py-10 rounded-xl flex flex-col  mx-auto  text-center mb-8 md:mb-0 w-full  max-w-md border-white border" />
+            <DonateButton className="mx-auto lg:ml-10  bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 p-3 rounded-md px-3 border-white border " />
             <div className="flex flex-col "></div>
             {/* <hr className="mt-10 mb-10" /> */}
             <div className=" flex flex-row justify-between ">

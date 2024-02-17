@@ -36,30 +36,30 @@ const EmailInput: React.FC<EmailInputProps> = ({className})  => {
   return !submitted ? (
     <div className={`${className}`}>
       <h1 className=" text-white font-thin text-2xl mb-3 animate-pulse whitespace-nowrap  ">
-        join mailing list
+        JOIN MAILING LIST
       </h1>
       <div className="flex flex-col space-x-2  ">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="w-5/6 grid mx-auto">
           <input
             {...register("name", { required: true })}
             type="text"
-            className="decoration-white h-8 w-72 text-md p-2 rounded-md mb-2"
+            className="decoration-white h-8  text-md p-2 rounded-md mb-2"
             placeholder="Name"
           />
           <input
             {...register("email", { required: true })}
             type="email"
-            className="decoration-white h-8 w-72 text-md p-2 rounded-md"
+            className="decoration-white h-8  text-md p-2 rounded-md"
             placeholder="Email"
           />
-          <button className="text-xl  text-slate-900 h-8 w-72 bg-[#CC8470] hover:bg-[#A34141] mt-2 rounded-md cursor-pointer">
+          <button className="text-xl  text-slate-900 h-8  bg-[#CC8470] hover:bg-[#A34141] mt-2 rounded-md cursor-pointer">
        JOIN
           </button>
         </form>
       </div>
     </div>
   ) : (
-    <div className=" p-10 text-slate-300 text-2xl text-center ">
+    <div className={`${className} p-10 text-white text-2xl text-center `}>
       <h1>Thank you for joining the mailing list! 🎊</h1>
       <br />
       <h1>🌊🌊🌊🌊🌊🌊🌊🌊🌊</h1>

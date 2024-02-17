@@ -9,6 +9,7 @@ import { useState } from "react";
 import BadgeIcon from "@mui/icons-material/Badge";
 import EmailIcon from "@mui/icons-material/Email";
 import CreateIcon from "@mui/icons-material/Create";
+import MenuButton from "../../components/NavBarItems";
 
 interface IFormInput {
   _id: string;
@@ -47,9 +48,19 @@ function Post({ post }: Props) {
   };
 
   return (
-    <main className="bg-neutral-900 text-white relative min-h-screen">
+    <>    <div className="fixed inset-0 z-0">
+    <div
+      className="absolute z-0 inset-0 bg-cover bg-center bg-main-bg"
+
+    />
+  </div>
+    <main className=" text-white relative min-h-screen ">
+      
       <div className="pb-[700px]">
+     
+      <MenuButton />
         <Header />
+    
         <div className="h-20"></div>
         <img
           className="w-full h-40 object-cover "
@@ -61,11 +72,11 @@ function Post({ post }: Props) {
           <h1 className="text-5xl mt-10 mb-3 font-thin text-center">
             {post.title}
           </h1>
-          <h2 className="text-xl font-light text-gray-500 mb-2  text-center">
+          <h2 className="text-xl font-light text-[#CC8470] mb-2  text-center">
             {post.description}
           </h2>
 
-          <div className="mt-10 grid">
+          <div className="mt-10 grid place-content-center">
             <div
               className="mx-auto mb-5 text-center"
               dangerouslySetInnerHTML={{ __html: post.embed }}
@@ -98,10 +109,10 @@ function Post({ post }: Props) {
           </div>
         </article>
 
-        <hr className="max-w-lg my-5 mx-auto border border-neutral-800" />
+        {/* <hr className="max-w-lg my-5 mx-auto" /> */}
 
         {submitted ? (
-          <div className="flex flex-col p-10 my-10 mx-auto bg-neutral-600 text-white max-w-2xl   ">
+          <div className="flex flex-col p-10 my-10 mx-auto bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 md:rounded-xl border-white border text-white max-w-2xl   ">
             <h3 className="text-3xl  font-thin text-center">
               Thank you for submitting your comment! 🎊
             </h3>
@@ -112,11 +123,11 @@ function Post({ post }: Props) {
         ) : (
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col p-5 max-w-2xl mx-auto mb-10 text-black"
+            className="flex flex-col p-5 max-w-2xl mx-auto mb-10 text-black mt-5"
           >
             {/* <h3 className="text-sm text-slate-500">Enjoyed this track</h3> */}
             <h4 className="text-3xl  text-slate-200 font-thin">
-              Leave a comment below!
+              Share your thoughts below
             </h4>
             <hr className="py-3 mt-2" />
 
@@ -128,61 +139,64 @@ function Post({ post }: Props) {
             />
 
             <label className="block mb-2">
-              <BadgeIcon fontSize="large" className="text-neutral-500" />
+              <BadgeIcon fontSize="medium" className="text-white my-2" />
               <input
                 {...register("name", { required: true })}
-                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
-                placeholder="Name"
+                className={` ${errors.name && "border-red-500 border-4"} shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200`}
+                placeholder="NAME"
                 type="text"
               />
             </label>
             <label className="block mb-2">
-              <EmailIcon fontSize="large" className="text-neutral-500" />
+              <EmailIcon fontSize="medium" className="text-white my-2" />
               <input
                 {...register("email", { required: true })}
-                className="shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
-                placeholder="Email"
+                className={` ${errors.email && "border-red-500 border-4"} shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200`}
+                placeholder="EMAIL"
                 type="email"
               />
             </label>
             <label className="block mb-2">
-              <CreateIcon fontSize="large" className="text-neutral-500" />
+              <CreateIcon fontSize="medium" className="text-white my-2" />
               <textarea
                 {...register("comment", { required: true })}
-                className="shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-400 outline-none focus:ring bg-slate-200"
-                placeholder="Enter comment"
+                className={` ${errors.comment && "border-red-500 border-4"} shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200 `}
+                placeholder="ENTER COMMENT"
                 rows={8}
               />
             </label>
 
             <input
               type="submit"
-              className="shadow bg-[#CC8470] hover:bg-slate-900 focus:shadow-outline focus:outline-none text-black font-bold py-4 px-4 rounded cursor-pointer w-2/3 mx-auto"
+              className="shadow bg-[#CC8470] hover:bg-slate-900 focus:shadow-outline focus:outline-none text-white font-thin  py-4 px-4 rounded cursor-pointer w-2/3 mx-auto mt-5"
+              
             />
 
             {/* errors return when validation fails */}
-            <div className="flex flex-col p-5">
+              
+            <div className={`flex flex-col p-5 r text-xl font-thin ${errors && " rounded-lg"} `}>
               {errors.name && (
-                <span className="text-red-500">The Name field is required</span>
+                <span className="text-white bg-red-500 bg-filter backdrop-blur-lg bg-opacity-50 w-5/6 mx-auto mt-3 p-3 rounded-lg">⚠️ The Name field is required</span>
               )}
               {errors.comment && (
-                <span className="text-red-500">
-                  The Comment field is required
+                <span className="text-white bg-red-500 bg-filter backdrop-blur-lg bg-opacity-50 w-5/6 mx-auto mt-3 p-3 rounded-lg">
+                  ⚠️ The Comment field is required
                 </span>
               )}
               {errors.email && (
-                <span className="text-red-500">
-                  The Email field is required
+                <span className="text-white bg-red-500 bg-filter backdrop-blur-lg bg-opacity-50 w-5/6 mx-auto mt-3 p-3 rounded-lg">
+                  ⚠️ The Email field is required
                 </span>
               )}
             </div>
+
           </form>
         )}
 
         {/* COMMENTS */}
-        <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 shadow shadow-slate-900">
+        <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-10 border border-white bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 rounded-xl">
           <h3 className="text-4xl">Comments</h3>
-          <hr className="pb-2" />
+          <hr className="  " />
           {post.comments.map((comment) => (
             <div key={comment._id} className="flex pt-3">
               <div>
@@ -206,6 +220,7 @@ rounded-br-xl">
       </div>
       <Footer />
     </main>
+    </>
   );
 }
 
