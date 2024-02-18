@@ -41,7 +41,7 @@ const Home = ({ posts, release }: Props) => {
           <title>Justin Waves</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <div className="pb-[300px] md:pb-[350px] relative min-h-screen">
+        <div className="pb-[300px] md:pb-[350px] relative ">
           {/* background-image */}
         <div className="fixed inset-0 z-0">
         <div
@@ -57,8 +57,8 @@ const Home = ({ posts, release }: Props) => {
             releaseUrl={release.releaseUrl}
             isDebut={release.isDebut}
           />
-          <StreamEmbed />
-          <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 ">
+          {/* <StreamEmbed /> */}
+          <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 relative">
             PURCHASE RELEASES
           </h1>
           <p className="text-sm text-left text-[#A34141] animate-pulse px-5">

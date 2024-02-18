@@ -1,5 +1,5 @@
 import React from "react";
-import { InstagramEmbed } from "react-social-media-embed";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 interface MainImageProps{
   releaseUrl? : string,
   releaseName : string,
@@ -27,6 +27,7 @@ const MainImage: React.FC<MainImageProps> = ({releaseUrl, releaseName,releaseTyp
             LISTEN
           </a>
         </div>
+<KeyboardArrowDownIcon className="absolute left-0 right-0 mx-auto bottom-1 animate-bounce  text-white text-6xl"/>
       </div>
     </div>
   );
