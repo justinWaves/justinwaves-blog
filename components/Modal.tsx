@@ -6,14 +6,15 @@ import RoundLogoSvg from './RoundLogoSvg';
 
 interface ModalProps {
     closeModal: () => void;
+    className?: string;
 }
 
-const Modal: React.FC<ModalProps> = ({ closeModal }) => {
+const Modal: React.FC<ModalProps> = ({ closeModal, className }) => {
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center bg-white bg-opacity-20 bg-filter backdrop-blur-xl z-50">
-      <div className="bg-black rounded-lg p-8 relative flex flex-col items-center ">
-      <RoundLogoSvg className="fill-sky-100 w-14   hover:fill-sky-300 hover:animate-pulse cursor-pointer"/>
+    <div className={`fixed inset-0 flex justify-center items-center bg-white bg-opacity-20 bg-filter backdrop-blur-xl z-50`}>
+      <div className="bg-black rounded-lg p-8 relative flex flex-col items-center w-screen md:w-2/6">
+      <RoundLogoSvg className="fill-white w-14   hover:fill-sky-300 hover:animate-pulse cursor-pointer"/>
         <button
           className="absolute top-0 right-0 p-2 text-gray-600"
           onClick={closeModal}

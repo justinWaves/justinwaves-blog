@@ -215,7 +215,7 @@ function Post({ post }: Props) {
                   />
                   <p className=" text-white font-thin mt-1 ">{comment.name} </p>
                 </div>
-                <div className="bg-neutral-800 p-3 mt-20 md:mt-24 rounded-bl-xl rounded-tr-xl rounded-br-xl h-fit w-5/6">
+                <div className="bg-neutral-900 p-3  md:mt-24 rounded-tl-xl rounded-tr-xl rounded-br-xl h-fit w-5/6">
                   <p> {comment.comment}</p>
                 </div>
               </div>

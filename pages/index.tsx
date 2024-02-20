@@ -35,7 +35,7 @@ const Home = ({ posts, release }: Props) => {
   console.log(release);
   return (
     <>
-      {isShowModal && <Modal closeModal={closeModal} />}
+      {/* {isShowModal && <Modal closeModal={closeModal} />} */}
       <div className="relative">
         <Head>
           <title>Justin Waves</title>

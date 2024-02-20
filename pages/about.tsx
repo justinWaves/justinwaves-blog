@@ -11,13 +11,13 @@ function about() {
       <div className="  w-screen pb-[800px] ">
         <MenuButton />
         <Header />
-        <div className="relative flex justify-between w-fit md:w-5/6  backdrop-filter backdrop-blur-xl bg-opacity-60 mx-auto rounded-xl h-screen">
+        <div className="relative flex justify-between w-fit md:w-5/6  mx-auto rounded-xl h-screen pt-20">
           <div className="w-5/6 mx-auto flex flex-col text-center">
             <div className=" grid place-items-center">
               <img
-                src="/waves epk banner.jpg"
+                src="/blue-waves-2.jpg"
                 alt=""
-                className="w-5/6 max-w-7xl rounded-xl mx-auto mt-32"
+                className="w-5/6 max-w-7xl  rounded-xl mx-auto"
               />
             </div>
             <div className=" grid place-items-center">
@@ -27,11 +27,11 @@ function about() {
                 </h1>
 
                 <p className="  mb-20    text-left mt-5">
-                  Justin Waves is a visionary sonic alchemist, multifaceted artist, revered as a singer-songwriter, record
-                  producer, and classically trained composer. Armed with a
+                  Justin Waves is a visionary sonic alchemist, multifaceted artist, singer-songwriter, composer, and working record
+                  producer. Armed with a
                   profound understanding of music composition, harmony, and
-                  groove, Justin pioneers uncharted territories in electronic
-                  music by blending cutting-edge technology with
+                  groove, Justin pioneers uncharted territories in the realm electronic
+                  music, blending cutting-edge technology with
                   timeless musical principles. Hailing from the vibrant cultural
                   hub of San Francisco, he draws inspiration from its eclectic
                   energy, infusing his compositions with a transformative spirit
