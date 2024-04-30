@@ -17,11 +17,11 @@ function Footer() {
             <DonateButton className="mx-auto lg:ml-10  bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 p-3 rounded-md px-3 border-white border " />
             <div className="flex flex-col "></div>
             {/* <hr className="mt-10 mb-10" /> */}
-            <div className=" flex flex-row justify-between ">
+            {/* <div className=" flex flex-row justify-between ">
               <div>
-                {/* <Link href="/">
+                <Link href="/">
                   <svg
-                    className="w-24 md:w-30   object-contain cursor-pointer fill-slate-200 hover:animate-pulse hover:fill-[#CC8470]"
+                    className="w-24 md:w-30   object-contain cursor-pointer fill-slate-900 hover:animate-pulse hover:fill-[#CC8470]"
                     xmlns="http://www.w3.org/2000/svg"
                     width="500"
                     height="44"
@@ -34,8 +34,8 @@ function Footer() {
                       transform="translate(-2009 -969)"
                     />
                   </svg>
-                </Link> */}
-                {/* <div className="text-slate-300 ">
+                </Link>
+                <div className="text-slate-900 ">
                   <Link href="/about">
                     <h2 className="hover:text-[#CC8470] cursor-pointer">About</h2>
                   </Link>
@@ -43,12 +43,12 @@ function Footer() {
                   <h2>Mixes</h2>
                   <h2>Shows</h2>
                   <h2>Shop</h2>
-                </div> */}
+                </div>
               </div>
-              {/* <Link href="/">
+              <Link href="/">
             <RoundLogoSvg className="fill-white w-20 relative top-10 hover:fill-[#CC8470] hover:animate-pulse cursor-pointer"/>
-              </Link> */}
-            </div>
+              </Link>
+            </div> */}
           </div>
         </div>
         <div className=" px-2 p-2  flex flex-row justify-between bg-[#141C2F] text-slate-600 text-xs">

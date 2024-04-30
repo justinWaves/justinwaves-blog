@@ -38,13 +38,6 @@ const MenuButton: React.FC = () => {
       </div>
       {/* desktop only right menu items */}
       <div className="hidden lg:flex absolute right-7 top-2 items-center space-x-5  z-40">
-        {/* <iframe
-          className="relative "
-          scrolling="no"
-          style={{ border: 0, width: "100%", height: 33 }}
-          src="https://bandcamp.com/band_follow_button_classic/1352604993"
-        ></iframe> */}
-
         <a
           href="https://open.spotify.com/artist/13TnKCSQSOkWzKgK09wNzQ?si=PV0-1SB0Sc2NAPrR9-MntQ"
           className="pt-1  text-white cursor-pointer"
@@ -74,7 +67,10 @@ const MenuButton: React.FC = () => {
           target="_blank"
         >
           {" "}
-          <AppleIcon className="text-4xl text-white hover:text-[#CC8470]" />
+          <AppleIcon
+            fontSize="large"
+            className="text-white hover:text-[#CC8470]"
+          />
         </a>
         <a
           href="https://www.instagram.com/justinwaves/"
@@ -114,7 +110,10 @@ const MenuButton: React.FC = () => {
           rel="noreferrer noopener"
           target="_blank"
         >
-          <YouTubeIcon className="text-4xl mt-1 text-white hover:text-[#CC8470]" />
+          <YouTubeIcon
+            fontSize="large"
+            className="mt-1 text-white hover:text-[#CC8470]"
+          />
         </a>
         <a
           href="https://soundcloud.com/justinwaves"
@@ -141,7 +140,7 @@ const MenuButton: React.FC = () => {
           isOpen
             ? "block opacity-100 backdrop-blur-xl bg-black "
             : "hidden opacity-0 backdrop-blur-sm "
-        }  -left-2 -top-14 pt-16 md:pt-24 relative md:rounded-br-xl w-screen md:w-96   bg-filter  bg-opacity-20 border-white border-b-2 md:border-r-2 ring-1 ring-black ring-opacity-5 divide-y  focus:outline-none transition-all duration-300 z-10 `}
+        }  -left-2 -top-14 pt-16 md:pt-18 relative md:rounded-br-xl w-screen md:w-96   bg-filter  bg-opacity-20 border-white border-b-2 md:border-r-2 ring-1 ring-black ring-opacity-5 divide-y  focus:outline-none transition-all duration-300 z-10 `}
       >
         <div className=" py-1 md:py-3 px-2">
           <Link href="/about">
@@ -153,7 +152,7 @@ const MenuButton: React.FC = () => {
             </div>
           </Link>
           <a href="mailto:jwmusicco@gmail.com">
-          <div className="flex px-4 hover:bg-white hover:bg-opacity-25 hover:rounded-2xl">
+            <div className="flex px-4 hover:bg-white hover:bg-opacity-25 hover:rounded-2xl">
               <MailIcon className=" text-white text-3xl relative top-1 md:top-3" />
               <p className="block px-2 py-2 md:py-4 text-xl font-thin text-white   cursor-pointer">
                 CONTACT
@@ -215,7 +214,7 @@ const MenuButton: React.FC = () => {
             target="_blank"
           >
             <div className="flex">
-              <AppleIcon className="text-4xl" />
+              <AppleIcon fontSize="large" />
               <p className="ml-2">APPLE MUSIC</p>
             </div>
           </a>
@@ -239,7 +238,7 @@ const MenuButton: React.FC = () => {
             target="_blank"
           >
             <div className="flex">
-              <InstagramIcon className="text-4xl" />
+              <InstagramIcon fontSize="large" />
               <p className="ml-2"> INSTAGRAM</p>{" "}
             </div>
           </a>
@@ -251,8 +250,7 @@ const MenuButton: React.FC = () => {
             target="_blank"
           >
             <div className="flex">
-              <YouTubeIcon className="text-4xl" />{" "}
-              <p className="ml-2">YOUTUBE</p>
+              <YouTubeIcon fontSize="large" /> <p className="ml-2">YOUTUBE</p>
             </div>
           </a>
           <a

@@ -27,54 +27,30 @@ function about() {
                 </h1>
 
                 <p className="  mb-20    text-left mt-5">
-                  Justin Waves is a visionary sonic alchemist, multifaceted artist, singer-songwriter, composer, and working record
-                  producer. Armed with a
-                  profound understanding of music composition, harmony, and
-                  groove, Justin pioneers uncharted territories in the realm electronic
-                  music, blending cutting-edge technology with
-                  timeless musical principles. Hailing from the vibrant cultural
-                  hub of San Francisco, he draws inspiration from its eclectic
-                  energy, infusing his compositions with a transformative spirit
-                  of creativity and innovation. Beyond his instrumental proficiency, Justin's dynamic
-                  live performances showcase his talents as a
-                  vocalist, transcending traditional boundaries and guiding
-                  audiences on a journey of cosmic
-                  understanding. With
-                  each sonic journey, he sparks a sense of wonder and
-                  exploration, inviting audiences to connect with their own creativity through the universal
-                  language of music.
+                  Justin Waves is a consummate sonic explorer, crafting
+                  mesmerizing compositions that offer an interesting new flavor
+                  of house music. His music blends indie-inspired songwriting
+                  and guitar work with lush analog synth-driven landscapes, all
+                  painted with a deep understanding of musical harmony and
+                  composition. Hailing from the vibrant culture of San
+                  Francisco, Justin draws inspiration from the city's eclectic
+                  energy to create music that transcends traditional boundaries.
+                  With a composition and sound design, Justin's avant-garde
+                  production techniques form the foundation of his works,
+                  delivering a unique blend of sonic textures and atmospheres.
+                  Having honed his craft through years of experimentation and
+                  exploration, Justin's music is perfectly tailored for both
+                  intimate venues and expansive dance festivals. Justin Waves
+                  invites listeners on a transcendent journey of sonic alchemy
+                  and inner transformation.
                 </p>
-                {/* <a
-                  href="https://www.dropbox.com/scl/fo/3jg7jgmf5xbol7r5mg9ib/h?rlkey=ulr8gdjs40ueh0tp7uwbjkrua&dl=0"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <button className="text-xl  text-slate-900 h-10 w-full bg-[#CC8470] hover-bg-200 mt-2 rounded-md cursor-pointer">
-                    Download EPK
-                  </button>
-                </a> */}
-    
+
                 <img src="/secret.png" alt="" className=" w-72 mx-auto" />
-    
               </div>
-       
             </div>
           </div>
         </div>
       </div>
-      {/* <InstagramEmbed
-        url="https://www.instagram.com/p/CdHebfhJpqZ/"
-        clientAccessToken="123|456"
-        maxWidth={320}
-        hideCaption={false}
-        containerTagName="div"
-        protocol=""
-        injectScript
-        onLoading={() => {}}
-        onSuccess={() => {}}
-        onAfterRender={() => {}}
-        onFailure={() => {}}
-      /> */}
       <Footer />
     </div>
   );
