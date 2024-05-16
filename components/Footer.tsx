@@ -6,15 +6,15 @@ import RoundLogoSvg from "./RoundLogoSvg";
 
 function Footer() {
   return (
-    <div className=" flex flex-col absolute bottom-0 w-screen ">
-      <div>
+    <div className=" flex flex-col justify-end relative bottom-0 w-screen h-[450px] md:h-[320px] ">
+
 
         <div className="  flex flex-col">
-          <div className="p-5 md:p-10  flex flex-col md:flex-row justify-cemter md:items-end">
+          <div className="  mb-5 flex flex-col md:flex-row justify-cemter md:items-end">
        
      
             <EmailInput className=" bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 py-10 rounded-xl flex flex-col  mx-auto  text-center mb-8 md:mb-0 w-full  max-w-md border-white border" />
-            <DonateButton className="mx-auto lg:ml-10  bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 p-3 rounded-md px-3 border-white border " />
+            {/* <DonateButton className="mx-auto lg:ml-10  bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 p-3 rounded-md px-3 border-white border " /> */}
             <div className="flex flex-col "></div>
             {/* <hr className="mt-10 mb-10" /> */}
             {/* <div className=" flex flex-row justify-between ">
@@ -51,7 +51,7 @@ function Footer() {
             </div> */}
           </div>
         </div>
-        <div className=" px-2 p-2  flex flex-row justify-between bg-[#141C2F] text-slate-600 text-xs">
+        <div className=" px-2 p-2  flex flex-row justify-between bg-[#141C2F] text-slate-600 text-xs ">
           <p>
             Design and build by{" "}
             <a
@@ -63,7 +63,7 @@ function Footer() {
           </p>
           <p>© 2022</p>
         </div>
-      </div>
+  
     </div>
   );
 }
