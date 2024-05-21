@@ -27,16 +27,16 @@ const Comment = ({ comment }:CommentProps) => {
       <div className="flex pt-10 h-fit">
         <div className="text-center w-1/6">
           <img
-            src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${comment.name}`}
+            src={`https://api.dicebear.com/7.x/notionists/svg?seed=${comment.name}`}
             alt=""
           />
           <p className="text-white font-thin mt-1">{comment.name}</p>
         </div>
-        <div>
+        <div className='pl-1'>
           <div className="bg-neutral-900 p-3 rounded-tl-xl rounded-tr-xl rounded-br-xl h-fit w-5/6">
             <p>{comment.comment}</p>
           </div>
-          <p className="text-xs text-zinc-300">{formattedDate}</p>
+          <p className="text-xs text-zinc-400 mt-1 ml-3">{formattedDate}</p>
         </div>
       </div>
     );
