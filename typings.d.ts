@@ -1,4 +1,4 @@
-export interface Post {
+export interface IPost {
     _id: string;
     _createdAt: string;
     title: string;
@@ -7,7 +7,7 @@ export interface Post {
         image: string;
     },
     embed:string;
-    comments: Comment[];
+    comments: IComment[];
     description: string;
     mainImage: {
         asset: {
@@ -20,7 +20,7 @@ export interface Post {
     body: object[];
 }
 
-export interface Comment {
+export interface IComment {
     approved: boolean;
     comment: string;
     email:  string;

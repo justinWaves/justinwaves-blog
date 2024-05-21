@@ -5,14 +5,14 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import MainImage from "../components/MainImage";
 import { sanityClient, urlFor } from "../sanity";
-import { Post, Release } from "../typings";
+import { IPost, Release } from "../typings";
 import Modal from "../components/Modal";
 import { useEffect, useState } from "react";
 import StreamEmbed from "../components/StreamEmbed";
 import MenuButton from "../components/NavBarItems";
 
 interface Props {
-  posts: [Post];
+  posts: [IPost];
   release: Release;
 }
 
@@ -61,14 +61,14 @@ const Home = ({ posts, release }: Props) => {
           <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 relative">
             PURCHASE RELEASES
           </h1>
-          <p className="text-sm text-left text-[#A34141] animate-pulse px-5">
+          {/* <p className="text-sm text-left text-[#A34141] animate-pulse px-5">
             Latest Release ⤵
-          </p>
+          </p> */}
           <div className="grid grid-cols-1 sm:gird-cols-2 lg:grid-cols-3 gap-3 md:gap-6 p-2 md:p-6   ">
             {sortedPosts.map((post) => (
               <Link key={post._id} href={`/post/${post.slug.current}`}>
                 <div
-                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-[#141C2F] backdrop-blur-xl bg-opacity-30 text-white"
+                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
                   data-cy="article"
                 >
                   <img
@@ -78,7 +78,7 @@ const Home = ({ posts, release }: Props) => {
                   />
                   <div className="flex justify-between p-5 ">
                     <div>
-                      <p className="text-lg font-bold ">{post.title}</p>
+                      <p className="text-xl font-bold mb-3">{post.title}</p>
                       <p className="text-xs">{post.description}</p>
                     </div>
                     <img

@@ -147,7 +147,7 @@ const MenuButton: React.FC = () => {
             <div className="flex px-4 hover:bg-white hover:bg-opacity-25 hover:rounded-2xl">
               <RoundLogoSvg className="fill-white w-8 " />
               <p className="block px-2 py-2 md:py-4 text-xl font-thin text-white   cursor-pointer">
-                ABOUT
+                BIO
               </p>
             </div>
           </Link>

@@ -1,15 +1,13 @@
-import { GetStaticProps } from "next";
-import PortableText from "react-portable-text";
-import Header from "../../components/Header";
-import Footer from "../../components/Footer";
-import { sanityClient, urlFor } from "../../sanity";
-import { Post } from "../../typings";
-import { useForm, SubmitHandler } from "react-hook-form";
-import { useState } from "react";
-import BadgeIcon from "@mui/icons-material/Badge";
-import EmailIcon from "@mui/icons-material/Email";
-import CreateIcon from "@mui/icons-material/Create";
-import MenuButton from "../../components/NavBarItems";
+import React, { useState } from 'react';
+import { GetStaticProps } from 'next';
+import PortableText from 'react-portable-text';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
+import { sanityClient, urlFor } from '../../sanity';
+import { IPost, IComment } from '../../typings';
+import { useForm, SubmitHandler } from 'react-hook-form';
+import MenuButton from '../../components/NavBarItems';
+import Comment from '../../components/Comment';
 
 interface IFormInput {
   _id: string;
@@ -17,12 +15,10 @@ interface IFormInput {
   email: string;
   comment: string;
 }
-interface Props {
-  post: Post;
-}
 
-const data =
-  '<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/track=1786914433/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://justinwaves.bandcamp.com/track/be-the-love-original-mix">Be The Love (Original Mix) by Justin Waves</a></iframe>';
+interface Props {
+  post: IPost;
+}
 
 function Post({ post }: Props) {
   const [submitted, setSubmitted] = useState(false);
@@ -33,8 +29,8 @@ function Post({ post }: Props) {
   } = useForm<IFormInput>();
 
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    fetch("/api/createComment", {
-      method: "POST",
+    fetch('/api/createComment', {
+      method: 'POST',
       body: JSON.stringify(data),
     })
       .then(() => {
@@ -49,27 +45,26 @@ function Post({ post }: Props) {
 
   return (
     <>
-      {" "}
       <div className="fixed inset-0 z-0">
         <div className="absolute z-0 inset-0 bg-cover bg-center bg-main-bg" />
       </div>
-      <main className=" text-white relative min-h-screen ">
+      <main className="text-white relative min-h-screen">
         <div className="pb-[500px]">
           <MenuButton />
           <Header />
 
           <div className="h-20"></div>
           <img
-            className="w-full h-40 object-cover "
+            className="w-full h-40 object-cover"
             src={urlFor(post.mainImage).url()!}
             alt=""
           />
 
-          <article className="max-w-3xl mx-auto p-5 ">
+          <article className="max-w-3xl mx-auto p-5">
             <h1 className="text-4xl md:text-5xl mt-10 mb-3 font-bold text-center">
               {post.title}
             </h1>
-            <h2 className="text-xl font-light text-white mb-2  text-center">
+            <h2 className="text-xl font-light text-white mb-2 text-center">
               {post.description}
             </h2>
 
@@ -106,11 +101,9 @@ function Post({ post }: Props) {
             </div>
           </article>
 
-          {/* <hr className="max-w-lg my-5 mx-auto" /> */}
-
           {submitted ? (
-            <div className="flex flex-col p-10 my-10 mx-auto bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 md:rounded-xl border-white border text-white max-w-2xl   ">
-              <h3 className="text-3xl  font-thin text-center">
+            <div className="flex flex-col p-10 my-10 mx-auto bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 md:rounded-xl border-white border text-white max-w-2xl">
+              <h3 className="text-3xl font-thin text-center">
                 Thank you for submitting your comment! 🎊
               </h3>
               <p className="font-thin text-center mt-2">
@@ -122,48 +115,44 @@ function Post({ post }: Props) {
               onSubmit={handleSubmit(onSubmit)}
               className="flex flex-col p-5 max-w-2xl mx-auto mb-10 text-black mt-5"
             >
-              {/* <h3 className="text-sm text-slate-500">Enjoyed this track</h3> */}
-              <h4 className="text-3xl  text-slate-200 font-bold text-center">
+              <h4 className="text-3xl text-slate-200 font-bold text-center">
                 Leave a Comment
               </h4>
               <hr className="py-3 mt-2" />
 
               <input
-                {...register("_id")}
+                {...register('_id')}
                 type="hidden"
                 name="_id"
                 value={post._id}
               />
 
               <label className="block mb-2">
-                {/* <BadgeIcon fontSize="medium" className="text-white my-2" /> */}
                 <input
-                  {...register("name", { required: true })}
-                  className={` ${
-                    errors.name && "border-red-500 border-4"
+                  {...register('name', { required: true })}
+                  className={`${
+                    errors.name && 'border-red-500 border-4'
                   } shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200`}
                   placeholder="Name"
                   type="text"
                 />
               </label>
               <label className="block mb-2">
-                {/* <EmailIcon fontSize="medium" className="text-white my-2" /> */}
                 <input
-                  {...register("email", { required: true })}
-                  className={` ${
-                    errors.email && "border-red-500 border-4"
+                  {...register('email', { required: true })}
+                  className={`${
+                    errors.email && 'border-red-500 border-4'
                   } shadow border rounded py-2 px-3 form-input mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200`}
                   placeholder="Email"
                   type="email"
                 />
               </label>
               <label className="block mb-2">
-                {/* <CreateIcon fontSize="medium" className="text-white my-2" /> */}
                 <textarea
-                  {...register("comment", { required: true })}
-                  className={` ${
-                    errors.comment && "border-red-500 border-4"
-                  } shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200 `}
+                  {...register('comment', { required: true })}
+                  className={`${
+                    errors.comment && 'border-red-500 border-4'
+                  } shadow border rounded py-2 px-3 form-textarea mt-1 block w-full ring-slate-600 font-thin outline-none focus:ring bg-slate-200`}
                   placeholder="Enter Comment"
                   rows={8}
                 />
@@ -171,15 +160,13 @@ function Post({ post }: Props) {
 
               <input
                 type="submit"
-                className="shadow bg-[#CC8470] hover:bg-slate-900 focus:shadow-outline focus:outline-none text-white font-thin  py-4 px-4 rounded cursor-pointer w-2/3 mx-auto mt-5"
+                className="shadow bg-[#CC8470] hover:bg-slate-900 focus:shadow-outline focus:outline-none text-white font-thin py-4 px-4 rounded cursor-pointer w-2/3 mx-auto mt-5"
               />
-
-              {/* errors return when validation fails */}
 
               <div
                 className={`flex flex-col p-5 r text-xl font-thin ${
-                  errors && " rounded-lg"
-                } `}
+                  errors && ' rounded-lg'
+                }`}
               >
                 {errors.name && (
                   <span className="text-white bg-red-500 bg-filter backdrop-blur-lg bg-opacity-50 w-full mx-auto mt-3 p-3 rounded-lg">
@@ -200,27 +187,15 @@ function Post({ post }: Props) {
             </form>
           )}
 
-          {/* COMMENTS */}
-          <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-5 border border-white bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 md:rounded-xl relative">
-            <h3 className="text-4xl font-bold text-center">Comments</h3>
-            <hr className="  " />
-            {post.comments.map((comment) => (
-              <div key={comment._id} className="flex justify-between 	 pt-3 h-fit  ">
-                <div className=" text-center w-1/6  ">
-                 
-                  <img
-                    src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${comment.name}`}
-                    alt=""
-                    className=""
-                  />
-                  <p className=" text-white font-thin mt-1 ">{comment.name} </p>
-                </div>
-                <div className="bg-neutral-900 p-3  md:mt-24 rounded-tl-xl rounded-tr-xl rounded-br-xl h-fit w-5/6">
-                  <p> {comment.comment}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+          {post.comments.length > 0 && (
+            <div className="my-10 mx-auto flex max-w-2xl flex-col space-y-2 p-5 border border-white bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 md:rounded-xl relative">
+              <h3 className="text-4xl font-bold text-center">Comments</h3>
+              <hr />
+              {post.comments.map((comment) => (
+                <Comment key={comment._id} comment={comment} />
+              ))}
+            </div>
+          )}
         </div>
         <Footer />
       </main>
@@ -233,13 +208,12 @@ export default Post;
 export const getStaticPaths = async () => {
   const query = `*[_type == "post"]{
     _id,
-  
-  slug{ current}
+    slug{ current }
   }`;
 
   const posts = await sanityClient.fetch(query);
 
-  const paths = posts.map((post: Post) => ({
+  const paths = posts.map((post: IPost) => ({
     params: {
       slug: post.slug.current,
     },
@@ -247,7 +221,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: 'blocking',
   };
 };
 
@@ -258,18 +232,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     title,
     embed,
     author -> {
-    name,
-    image
-  },
-  "comments": *[
-    _type == "comment" && post._ref == ^ ._id &&
-    approved == true
-  ],
-  description,
-  mainImage, 
-  slug,
-  body
+      name,
+      image
+    },
+    "comments": *[
+      _type == "comment" && post._ref == ^._id && approved == true
+    ],
+    description,
+    mainImage,
+    slug,
+    body
   }`;
+
   const post = await sanityClient.fetch(query, {
     slug: params?.slug,
   });
