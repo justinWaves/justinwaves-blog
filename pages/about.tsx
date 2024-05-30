@@ -5,21 +5,21 @@ import MenuButton from "../components/NavBarItems";
 
 function about() {
   return (
-    <div className="relative  bg-main-bg bg-cover bg-center text-sky-100 overflow-auto">
-      <div className=" w-screen pb-[700px] md:pb-[500px]  ">
+    <div className="relative  bg-main-bg bg-cover bg-center text-sky-100  ">
+      <div className=" w-screen  md:pb-[500px]  ">
         <MenuButton />
         <Header />
-        <div className="relative flex justify-between w-fit md:w-5/6  mx-auto rounded-xl h-screen pt-20">
+        <div className="relative flex justify-between w-fit md:w-5/6  mx-auto rounded-xl  pt-20">
           <div className="w-screen mx-auto flex flex-col text-center">
-            <div className=" flex justify-center mt-10">
+            <div className=" flex justify-center ">
               <img
-                src="/blue-waves-2.jpg"
+                src="blue-waves-2.jpg"
                 alt=""
                 className="w-5/6 md:w-[500px]  rounded-xl mx-auto"
               />
             </div>
             <div className=" grid place-items-center">
-              <div className="max-w-4xl bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 rounded-xl  mx-auto px-20 py-10 mt-10  ">
+              <div className="max-w-4xl bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 rounded-xl  mx-auto px-5 md:px-20 py-10   ">
                 <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
                   Artist Bio
                 </h1>
@@ -57,8 +57,9 @@ function about() {
                   individuals from worries, enabling them to embrace the present
                   moment wholeheartedly.
                 </p>
+                <img src="waves-donner.jpg" alt="" className="mt-5 rounded-lg shadow-lg" />
               </div>
-              <img src="/secret.png" alt="" className=" w-72 mx-auto mt-10" />
+              <img src="/secret.png" alt="" className=" w-1/2 max-w-xs mx-auto mt-10" />
             </div>
           </div>
         </div>
