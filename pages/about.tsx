@@ -19,43 +19,23 @@ function about() {
               />
             </div>
             <div className=" grid place-items-center">
-              <div className="max-w-4xl bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-30 rounded-xl  mx-auto px-5 md:px-20 py-10   ">
+              <div className="max-w-4xl bg-[#141C2F] bg-filter backdrop-blur-lg bg-opacity-70 rounded-xl  mx-auto px-5 md:px-20 py-10   ">
                 <h1 className="w-fit mx-auto px-10 pt-2  text-5xl mt-5 font-thin  ">
                   Artist Bio
                 </h1>
 
                 <p className="  text-lg  text-left mt-5">
-                  Justin Waves is a multifaceted artist and producer from San
-                  Francisco, CA. Immersed in music projects since age 12, he
-                  began making electronic records at the age of 16 inspired by
-                  Four Tet, The Postal Service, and similar indie electronic
-                  acts, which soon opened the door to the world of dance music.
-                  At the age of 21 he left his band to pursue a solo career as a
-                  DJ/ Producer, releasing house and techno records under his
-                  full name (Justin Weisberg), until one evening, after
-                  experimenting with adding his own vocals to a track, a new
-                  sound emerged, and Justin Waves was born. 
+
+<strong>Justin Waves is an artist driven by a deep, almost obsessive connection to creativity—a connection that has shaped every aspect of his music.</strong> From his early days in San Francisco to his evolution as a solo producer, Justin has consistently pushed the boundaries of electronic music, seeking to capture complex emotions within his deeply layered, signature sound.
                   <br/>
                   <br/>
-                  Justin’s music has
-                  matured over time into an unmistakable signature sound, deeply
-                  layered and musical, laced with indie-inspired songwriting and
-                  a touch of pop sensibility, all glued together with punchy,
-                  organic house percussion and baselines. His live shows blend
-                  traditional DJ decks, live piano, and heartfelt vocals,
-                  creating unique and immersive experiences, and has shared
-                  stages with acts like Bob Moses, Hayden James, Télépopmusik,
-                  Kraak & Smaak, Alex Cruz, and many others. Also a DJ with a
-                  wealth of experience spanning well over a decade, Justin’s
-                  hybrid/ live sets are perfect for both intimate clubs and
-                  large festivals. 
+                  From the moment he began experimenting with electronic records at 16, Justin was hooked, influenced by indie electronic acts like Four Tet and The Postal Service. But it wasn’t until he ventured out on his own that Justin truly found his voice. After years of releasing house and techno under his full name, a pivotal moment occurred when he began incorporating his own vocals into his tracks. This marked the birth of Justin Waves, a project where organic percussion and melodic depth intertwine with indie-inspired songwriting and a hint of pop sensibility.
                   <br/>
                   <br/>
-                  Driven by a deep-seated passion for forging
-                  connections through the universal language of music, Justin
-                  Waves utilizes his songwriting as a means to liberate
-                  individuals from worries, enabling them to embrace the present
-                  moment wholeheartedly.
+                  Justin’s journey hasn’t just been about creating music—it’s been about perfecting a craft that allows him to express the full spectrum of human emotion. His live performances are a testament to this, blending traditional DJ sets with live piano and heartfelt vocals, creating an immersive experience that resonates with audiences on a profound level. Whether on stage at an intimate club or a sprawling festival, Justin’s hybrid/live sets offer a unique journey, one that has seen him share stages with renowned artists such as Bob Moses, Hayden James, and Télépopmusik.
+                  <br/>
+                  <br/>
+                  At the heart of Justin Waves’ music is a desire to connect—to use his songs as a vessel to transport listeners out of their worries and into the present moment. This passion for connection and his relentless pursuit of emotional depth in music defines Justin Waves, making him a distinctive voice in the world of electronic music.
                 </p>
                 <img src="waves-donner.jpg" alt="" className="mt-5 rounded-lg shadow-lg" />
               </div>
