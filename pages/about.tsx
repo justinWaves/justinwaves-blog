@@ -13,7 +13,7 @@ function about() {
           <div className="w-screen mx-auto flex flex-col text-center">
             <div className=" flex justify-center ">
               <img
-                src="blue-waves-2.jpg"
+                src="jw-hero-web.jpg"
                 alt=""
                 className="w-5/6 md:w-[500px]  rounded-xl mx-auto"
               />
@@ -37,7 +37,7 @@ function about() {
                   <br/>
                   At the heart of Justin Waves’ music is a desire to connect—to use his songs as a vessel to transport listeners out of their worries and into the present moment. This passion for connection and his relentless pursuit of emotional depth in music defines Justin Waves, making him a distinctive voice in the world of electronic music.
                 </p>
-                <img src="waves-donner.jpg" alt="" className="mt-5 rounded-lg shadow-lg" />
+                {/* <img src="waves-donner.jpg" alt="" className="mt-5 rounded-lg shadow-lg" /> */}
               </div>
               <img src="/secret.png" alt="" className=" w-1/2 max-w-xs mx-auto mt-10" />
             </div>

@@ -45,8 +45,7 @@ const Home = ({ posts, release }: Props) => {
           {/* background-image */}
         <div className="fixed inset-0 z-0">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-main-bg"
-
+          className="absolute inset-0 bg-cover bg-center bg-main-bg "
         />
       </div>
           <MenuButton />
