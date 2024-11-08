@@ -49,7 +49,7 @@ function Post({ post }: Props) {
         <div className="absolute z-0 inset-0 bg-cover bg-center bg-main-bg" />
       </div>
       <main className="text-white relative min-h-screen">
-        <div className="pb-[500px]">
+        <div className="pb-[20px]">
           <MenuButton />
           <Header />
 

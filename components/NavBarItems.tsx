@@ -151,14 +151,14 @@ const MenuButton: React.FC = () => {
               </p>
             </div>
           </Link>
-          <a href="mailto:jwmusicco@gmail.com">
+          {/* <a href="mailto:jwmusicco@gmail.com">
             <div className="flex px-4 hover:bg-white hover:bg-opacity-25 hover:rounded-2xl">
               <MailIcon className=" text-white text-3xl relative top-1 md:top-3" />
               <p className="block px-2 py-2 md:py-4 text-xl font-thin text-white   cursor-pointer">
-                CONTACT
+                EMAIL
               </p>
             </div>
-          </a>
+          </a> */}
           {/* <a
             href="#"
             className="block px-4 py-4 text-xl font-thin text-slate-300 hover:bg-black hover:bg-opacity-25 hover:rounded-2xl hover:text-sky-300 cursor-pointer"

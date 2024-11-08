@@ -58,7 +58,7 @@ const Home = ({ posts, release }: Props) => {
           />
           {/* <StreamEmbed /> */}
           <h1 className="font-thin text-white text-center text-5xl py-4 pt-20 pb-20 relative">
-            PURCHASE RELEASES
+    RELEASES
           </h1>
           {/* <p className="text-sm text-left text-[#A34141] animate-pulse px-5">
             Latest Release ⤵
@@ -67,7 +67,7 @@ const Home = ({ posts, release }: Props) => {
             {sortedPosts.map((post) => (
               <Link key={post._id} href={`/post/${post.slug.current}`}>
                 <div
-                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter bg-white backdrop-blur-xl bg-opacity-30 text-white"
+                  className="border rounded-lg group cursor-pointer overflow-hidden relative  bg-filter  backdrop-blur-xl bg-opacity-30 text-white"
                   data-cy="article"
                 >
                   <img
