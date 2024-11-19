@@ -26,8 +26,9 @@ function about() {
 
                 <p className="  text-lg  text-left mt-5">
 
-                Justin Waves is a singer, songwriter, and producer whose music captures the raw essence of human emotion through a unique fusion of indie songwriting, layered electronic soundscapes, and live instrumentation. Born from a passion for connection and creativity, Justin's journey began in San Francisco, inspired by electronic pioneers like Four Tet and The Postal Service. Over the years, he’s honed his craft, blending heartfelt vocals with organic house rhythms to create a signature sound that resonates deeply with audiences. His immersive live performances—featuring piano, vocals, and DJ sets—have captivated crowds alongside acts like Bob Moses and Hayden James. Driven by an unrelenting desire to free listeners from their worries and ground them in the present moment, Justin Waves is redefining the boundaries of electronic music.
-              
+                Justin Waves is a singer, songwriter, producer, and performer whose music merges introspective storytelling with immersive electronic soundscapes and live performance. Rooted in a passion for connection and creativity, Justin’s work is defined by heartfelt vocals and richly textured compositions that blend the intimacy of indie songwriting with the dynamic energy of electronic music. "At its core, my music is about telling stories—honest, human stories that connect people to themselves and each other," he says.
+<br/><br/>
+Hailing from San Francisco, Justin's artistic journey began with influences like Four Tet and The Postal Service, evolving into a sound that is unmistakably his own. Over the years, his craft has matured into emotionally charged performances where live piano, vocals, and DJ decks create an unforgettable experience. Sharing stages with artists like Bob Moses and Hayden James, Justin Waves continues to push boundaries, creating music that moves beyond genres and leaves a lasting impact.
                 </p>
                 {/* <img src="waves-donner.jpg" alt="" className="mt-5 rounded-lg shadow-lg" /> */}
               </div>
