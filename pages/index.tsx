@@ -71,7 +71,7 @@ const Home = ({ posts, release }: Props) => {
                   data-cy="article"
                 >
                   <img
-                    className="h-60 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
+                    className="h-65 w-full object-cover group-hover:scale-110 transition-transform duration-200 ease-in-out "
                     src={urlFor(post.mainImage).url()!}
                     alt=""
                   />
