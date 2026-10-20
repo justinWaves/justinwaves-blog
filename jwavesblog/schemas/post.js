@@ -24,8 +24,15 @@ export default {
       },
     },
     {
+      name: "purchaseEmbed",
+      title: "Purchase embed",
+      description: "Paste the complete HTTPS iframe embed from Beatport, Bandcamp, or another supported provider. Optional. Appears above the audio player on the release page.",
+      type: "text",
+      rows: 5,
+    },
+    {
       name: "embed",
-      title: "Embed",
+      title: "Audio player embed",
       description: "Paste in HTML embed of song",
       type: "string",
     },
