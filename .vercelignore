@@ -1,0 +1,4 @@
+_private/
+jwavesblog/node_modules/
+jwavesblog/dist/
+.env*
